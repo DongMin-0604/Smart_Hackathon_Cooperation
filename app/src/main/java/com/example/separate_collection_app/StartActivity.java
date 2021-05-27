@@ -22,6 +22,7 @@ public class StartActivity extends AppCompatActivity {
         start_title.setPaintFlags(start_title.getPaintFlags()| Paint.FAKE_BOLD_TEXT_FLAG);
 
         Button TestBT = (Button)findViewById(R.id.go_main_bt);
+
         TestBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,13 +4,41 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    private long backkeyPressedTime = 0;
+
+    private Toast toast;
+
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+
+        if (System.currentTimeMillis() > backkeyPressedTime + 2000){
+            backkeyPressedTime = System.currentTimeMillis();
+
+            toast = Toast.makeText(this,"뒤로 버튼을 한번 더 누르시면 종료됩니다.",  Toast.LENGTH_SHORT);
+            toast.show();
+            return;
+        }
+
+        if (System.currentTimeMillis() <= backkeyPressedTime+2000){
+            finish();
+            android.os.Process.killProcess(android.os.Process.myPid());
+            toast.cancel();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +66,22 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        SharedPreferences pref = getSharedPreferences("IsFirst", Activity.MODE_PRIVATE);
+        boolean first = pref.getBoolean("isFirst",false);
+        if (first == false){
+            Log.d("Is first Time?","first");
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("isFirst",true);
+            editor.commit();
+
+            Intent intent = new Intent(getApplicationContext(),StartActivity.class);
+            startActivity(intent);
+        }else{
+            Log.d("Is first Time?","not first");
+        }
+
+
+
 
 
     }
