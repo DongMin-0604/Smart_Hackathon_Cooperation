@@ -11,23 +11,23 @@
 
     <TextView
         android:id="@+id/Start_Title"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="지구지킴이(가제)"
         android:textColor="#000000"
         android:textSize="70px"
-        app:layout_constraintBottom_toTopOf="@+id/Start_Info"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089" />
 
     <TextView
         android:id="@+id/Start_Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="555dp"
         android:gravity="center"
         android:text="분리수거 알림을 위한 지역, 배출 요일 정보를 입력해주세요."
         android:textColor="#000000"
@@ -35,7 +35,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Title"
+        app:layout_constraintVertical_bias="0.056" />
 
     <Button
         android:id="@+id/go_main_bt"
@@ -49,5 +51,150 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.787" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.287">
+        <TextView
+            android:id="@+id/city_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="--시"
+            android:textColor="@color/white"
+            android:textSize="44px"
+            android:width="250px" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/country_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="--구"
+            android:textColor="@color/white"
+            android:textSize="44px"
+            android:width="250px"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/town_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:width="250px"
+            android:gravity="center"
+            android:text="--동"
+            android:textColor="@color/white"
+            android:textSize="44px" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/city_info"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="시/도"
+        android:textSize="55px"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435" />
+
+    <Spinner
+        android:id="@+id/dropdown_spinner"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:entries="@array/CityDropDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435" />
+
+    <TextView
+        android:id="@+id/country_info"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="군/구"
+        android:textColor="#000000"
+        android:textSize="55px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
+
+    <Spinner
+        android:id="@+id/dropdown_country"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:entries="@array/CountryDropDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
+
+    <TextView
+        android:id="@+id/town_info"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="동"
+        android:textColor="#000000"
+        android:textSize="55px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <Spinner
+        android:id="@+id/dropdown_town"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:entries="@array/TownDropDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
