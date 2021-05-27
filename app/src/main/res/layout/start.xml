@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/Start_Title"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center"
         android:text="지구지킴이(가제)"
@@ -41,7 +41,7 @@
 
     <Button
         android:id="@+id/go_main_bt"
-        android:layout_width="90dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:text="화면전환 테스트"
         android:textSize="35px"
@@ -114,7 +114,7 @@
 
     <TextView
         android:id="@+id/city_info"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="시/도"
@@ -142,7 +142,7 @@
 
     <TextView
         android:id="@+id/country_info"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="군/구"
@@ -170,7 +170,7 @@
 
     <TextView
         android:id="@+id/town_info"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="동"
