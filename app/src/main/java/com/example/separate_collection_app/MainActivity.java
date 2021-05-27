@@ -19,17 +19,17 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavi);
 
-        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new Search()).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new Home()).commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.item_fragment1:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Search()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Home()).commit();
                         break;
                     case R.id.item_fragment2:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Home()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Search()).commit();
                         break;
                     case R.id.item_fragment3:
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyInfo()).commit();
