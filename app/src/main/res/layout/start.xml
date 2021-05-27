@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_color"
     tools:context=".StartActivity">
 
     <!--시작 화면(시,구,요일정보 입력 받는 창)  -->
+
     <TextView
         android:id="@+id/Start_Title"
         android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="0dp"
         android:gravity="center"
         android:text="지구지킴이(가제)"
         android:textColor="#000000"
         android:textSize="70px"
+        app:layout_constraintBottom_toTopOf="@+id/Start_Info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,17 +25,29 @@
 
     <TextView
         android:id="@+id/Start_Info"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="555dp"
         android:gravity="center"
         android:text="분리수거 알림을 위한 지역, 배출 요일 정보를 입력해주세요."
         android:textColor="#000000"
         android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/go_main_bt"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:text="화면전환 테스트"
+        android:textSize="35px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.787" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
