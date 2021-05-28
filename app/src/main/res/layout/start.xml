@@ -22,36 +22,49 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/Start_Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="분리수거 알림을 위한 지역, 배출 요일 정보를 입력해주세요."
+        android:text="분리수거 알림을 위한 지역, 배출 요일 정보를 입력해주세요. \n*앱 최초실행시에만 뜨는 창입니다.*"
         android:textColor="#000000"
         android:textSize="40px"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Start_Title"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintTop_toBottomOf="@+id/Start_Title" />
+
+    <Spinner
+        android:id="@+id/dropdown_spinner"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:dropDownWidth="150dp"
+        android:entries="@array/CityDropDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
         android:id="@+id/go_main_bt"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:backgroundTint="#3f962c "
         android:text="다음으로"
         android:textSize="35px"
-        android:backgroundTint="#3f962c "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        app:layout_constraintVertical_bias="0.851" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -61,16 +74,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287">
+        app:layout_constraintVertical_bias="0.352">
+
         <TextView
             android:id="@+id/city_temp"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:width="250px"
             android:gravity="center"
             android:text="--시"
             android:textColor="@color/white"
-            android:textSize="44px"
-            android:width="250px" />
+            android:textSize="44px" />
 
         <TextView
             android:id="@+id/textView2"
@@ -85,11 +99,11 @@
             android:id="@+id/country_temp"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:width="250px"
             android:gravity="center"
             android:text="--구"
             android:textColor="@color/white"
-            android:textSize="44px"
-            android:width="250px"/>
+            android:textSize="44px" />
 
         <TextView
             android:id="@+id/textView3"
@@ -113,49 +127,18 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/city_info"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="시/도 : "
-        android:textSize="55px"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
-
     <Spinner
-        android:id="@+id/dropdown_spinner"
+        android:id="@+id/dropdown_town"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/white"
-        android:dropDownWidth="150dp"
-        android:entries="@array/CityDropDown"
+        android:entries="@array/TownDropDown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.658"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
-
-    <TextView
-        android:id="@+id/country_info"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="군/구 : "
-        android:textColor="#000000"
-        android:textSize="55px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.713" />
 
     <Spinner
         android:id="@+id/dropdown_country"
@@ -168,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.658"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <TextView
         android:id="@+id/town_info"
@@ -183,20 +166,37 @@
         app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintVertical_bias="0.713" />
 
-    <Spinner
-        android:id="@+id/dropdown_town"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/city_info"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:backgroundTint="@color/white"
-        android:entries="@array/TownDropDown"
+        android:gravity="center"
+        android:text="시/도 : "
+        android:textColor="#000000"
+        android:textSize="55px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintHorizontal_bias="0.302"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/country_info"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="군/구 : "
+        android:textColor="#000000"
+        android:textSize="55px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
