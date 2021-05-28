@@ -38,19 +38,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Start_Title" />
 
-    <Spinner
-        android:id="@+id/dropdown_spinner"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/white"
-        android:dropDownWidth="150dp"
-        android:entries="@array/CityDropDown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
 
     <Button
         android:id="@+id/go_main_bt"
@@ -128,17 +115,18 @@
     </LinearLayout>
 
     <Spinner
-        android:id="@+id/dropdown_town"
+        android:id="@+id/dropdown_spinner"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/white"
-        android:entries="@array/TownDropDown"
+        android:dropDownWidth="150dp"
+        android:entries="@array/CityDropDown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.658"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <Spinner
         android:id="@+id/dropdown_country"
@@ -152,6 +140,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.607" />
+
+    <Spinner
+        android:id="@+id/dropdown_town"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:entries="@array/TownDropDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.713" />
+
+
 
     <TextView
         android:id="@+id/town_info"
