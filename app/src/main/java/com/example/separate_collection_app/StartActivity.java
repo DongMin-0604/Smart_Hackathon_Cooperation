@@ -41,13 +41,17 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
+
+
             }
         });
+
 
         CitySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 CityTV.setText(parent.getItemAtPosition(position).toString());
+
             }
 
             @Override
@@ -58,6 +62,7 @@ public class StartActivity extends AppCompatActivity {
         CountrySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 CountryTV.setText(parent.getItemAtPosition(position).toString());
             }
 

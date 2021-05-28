@@ -4,30 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="홈 화면입니다."
-        android:textSize="30dp"
-        android:gravity="center"
-        android:background="@color/back_color" />
+    tools:context=".Home"
+    android:background="@color/back_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/logo"
+            android:text="로고 자리테스트용 텍스트뷰"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/logo"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:src="@drawable/logo1"-->
 
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

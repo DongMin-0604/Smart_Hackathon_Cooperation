@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="CityDropDown">
+        <item>--시</item>
         <item>서울특별시</item>
         <item>부산광역시</item>
         <item>인천광역시</item>
     </string-array>
 
     <string-array name="CountryDropDown">
+        <item>--구</item>
         <item>강동구</item>
         <item>강남구</item>
         <item>동대문구</item>
     </string-array>
 
     <string-array name="TownDropDown">
+        <item>--동</item>
         <item>상일동</item>
         <item>성내동</item>
         <item>천호동</item>
