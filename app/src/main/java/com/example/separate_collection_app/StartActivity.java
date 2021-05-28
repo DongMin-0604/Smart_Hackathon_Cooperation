@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListPopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.lang.reflect.Field;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -22,14 +25,13 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        //   시작화면 제목 두껍게 하기위한 코드
+        //   시작화면 제목 두껍게 하기위한 코드 로고로 대체시 삭제 예정
         start_title =(TextView) findViewById(R.id.Start_Title);
         start_title.setPaintFlags(start_title.getPaintFlags()| Paint.FAKE_BOLD_TEXT_FLAG);
 
         CitySP = (Spinner)findViewById(R.id.dropdown_spinner);
         CountrySP = (Spinner)findViewById(R.id.dropdown_country);
         TownSP = (Spinner)findViewById(R.id.dropdown_town);
-
         CityTV = (TextView)findViewById(R.id.city_temp);
         CountryTV  = (TextView)findViewById(R.id.country_temp);
         TownTV = (TextView)findViewById(R.id.town_temp);
@@ -45,7 +47,6 @@ public class StartActivity extends AppCompatActivity {
 
             }
         });
-
 
         CitySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
