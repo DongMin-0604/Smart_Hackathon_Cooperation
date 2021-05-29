@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:background="@color/white">
+    android:background="@color/back_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="로고 자리테스트용 텍스트뷰"
-
+            android:textColor="#000000"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="592dp"
-            android:textColor="@color/back_color"
+            android:textColor="@color/white"
             android:textSize="23dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

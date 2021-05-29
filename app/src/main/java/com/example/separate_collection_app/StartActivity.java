@@ -5,6 +5,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListPopupWindow;
 import android.widget.Spinner;
@@ -12,9 +13,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StartActivity extends AppCompatActivity {
+
+
 
     private Spinner CitySP,CountrySP,TownSP;
     private TextView CityTV,CountryTV,TownTV;
@@ -44,9 +50,10 @@ public class StartActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
 
-
             }
         });
+
+
 
         CitySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
