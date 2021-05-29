@@ -36,9 +36,9 @@ public class StartActivity extends AppCompatActivity {
         CountryTV  = (TextView)findViewById(R.id.country_temp);
         TownTV = (TextView)findViewById(R.id.town_temp);
 
-        Button TestBT = (Button)findViewById(R.id.go_main_bt);
+        Button GO_MAIN_BT = (Button)findViewById(R.id.go_main_bt);
 
-        TestBT.setOnClickListener(new View.OnClickListener() {
+        GO_MAIN_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
