@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/search_view"
         app:iconifiedByDefault="false"
-        app:queryHint="검색어를 입력하시요"
+        app:queryHint="검색어를 입력하시오"
         android:layout_marginTop="30dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
