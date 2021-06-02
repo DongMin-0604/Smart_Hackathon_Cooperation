@@ -42,36 +42,36 @@
     <Button
         android:id="@+id/go_main_bt"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="100dp"
         android:backgroundTint="#3f962c "
         android:text="다음으로"
-        android:textSize="35px"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
         android:id="@+id/dropdown_spinner"
         android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/white"
+        android:layout_height="55dp"
+        android:background="@drawable/spinner_background"
         android:dropDownWidth="150dp"
         android:entries="@array/CityDropDown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <Spinner
         android:id="@+id/dropdown_country"
         android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/white"
+        android:layout_height="55dp"
+        android:background="@drawable/spinner_background"
         android:entries="@array/CountryDropDown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +79,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.503" />
+    <Spinner
+        android:id="@+id/dropdown_town"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/TownDropDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61" />
 
     <TextView
         android:id="@+id/town_info"
@@ -125,18 +137,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396" />
 
-    <Spinner
-        android:id="@+id/dropdown_town"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/white"
-        android:entries="@array/TownDropDown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+
 
     <LinearLayout
         android:layout_width="wrap_content"
