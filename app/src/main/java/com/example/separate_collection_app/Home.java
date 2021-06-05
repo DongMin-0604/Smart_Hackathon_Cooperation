@@ -30,6 +30,7 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home,container,false);
 
+
         TV_Date = (TextView)v.findViewById(R.id.Data_Display);
         // Inflate the layout for this fragment
         TV_Date.setText("오늘은 "+getTime()+" 입니다.");

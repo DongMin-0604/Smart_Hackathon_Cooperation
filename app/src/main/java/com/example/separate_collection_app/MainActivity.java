@@ -1,12 +1,16 @@
 package com.example.separate_collection_app;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -40,10 +44,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            // 21 버전 이상일 때 상태바 색상 변경
+            getWindow().setStatusBarColor(Color.BLACK);
+        }
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         bottomNavigationView = findViewById(R.id.bottomNavi);
 

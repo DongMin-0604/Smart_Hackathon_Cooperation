@@ -28,15 +28,17 @@
         android:id="@+id/Start_Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginBottom="394dp"
         android:gravity="center"
         android:text="분리수거 알림을 위한 지역, 배출 요일 정보를 입력해주세요. \n*앱 최초실행시에만 뜨는 창입니다.*"
         android:textColor="#000000"
         android:textSize="40px"
+        android:textStyle="normal|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Start_Title" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -79,6 +81,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.503" />
+
     <Spinner
         android:id="@+id/dropdown_town"
         android:layout_width="150dp"
@@ -130,6 +133,7 @@
         android:text="시/도 : "
         android:textColor="#000000"
         android:textSize="55px"
+        android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
@@ -138,8 +142,8 @@
         app:layout_constraintVertical_bias="0.396" />
 
 
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -158,7 +162,8 @@
             android:gravity="center"
             android:text="--시"
             android:textColor="@color/white"
-            android:textSize="44px" />
+            android:textSize="44px"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView2"
@@ -177,7 +182,8 @@
             android:gravity="center"
             android:text="--구"
             android:textColor="@color/white"
-            android:textSize="44px" />
+            android:textSize="44px"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView3"
@@ -196,10 +202,129 @@
             android:gravity="center"
             android:text="--동"
             android:textColor="@color/white"
-            android:textSize="44px" />
-
+            android:textSize="44px"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당신의 분리수거 요일을 선택해 주세요."
+        android:textColor="@color/black"
+        android:textSize="44px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.721" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="130px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_marginLeft="10px"
+        android:textOff="월"
+        android:textOn="월"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="130px"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_height="wrap_content"
+        android:textOff="화"
+        android:textOn="화"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="130px"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_height="wrap_content"
+        android:textOff="수"
+        android:textOn="수"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton4"
+        android:layout_width="130px"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_height="wrap_content"
+        android:textOff="목"
+        android:textOn="목"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton5"
+        android:layout_width="130px"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_height="wrap_content"
+        android:textOff="금"
+        android:textOn="금"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton6"
+        android:layout_width="130px"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_height="wrap_content"
+        android:textOff="토"
+        android:textOn="토"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton7"
+        android:layout_width="130px"
+        android:background="@drawable/toggle_bt_background"
+        android:layout_height="wrap_content"
+        android:textOff="일"
+        android:textOn="일"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
