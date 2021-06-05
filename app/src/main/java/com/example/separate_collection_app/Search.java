@@ -1,5 +1,6 @@
 package com.example.separate_collection_app;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.SearchView;
 
 public class Search extends Fragment {
 
@@ -15,6 +18,7 @@ public class Search extends Fragment {
         return new Search();
     }
 
+    SearchView SV;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class Search extends Fragment {
                 ((MainActivity)getActivity()).replaceFragment(category_plastic.newInstance());
             }
         });
+
+
         return v;
     }
 
