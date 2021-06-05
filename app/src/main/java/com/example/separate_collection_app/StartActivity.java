@@ -1,11 +1,13 @@
 package com.example.separate_collection_app;
 
 import android.annotation.SuppressLint;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,6 +21,7 @@ import android.widget.ToggleButton;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -28,11 +31,8 @@ import java.util.List;
 public class StartActivity extends AppCompatActivity {
 
 
-
     private Spinner CitySP,CountrySP,TownSP;
     private TextView CityTV,CountryTV,TownTV;
-
-    TextView start_title;
 
     ToggleButton toggleBT1,toggleBT2,toggleBT3,toggleBT4,toggleBT5,toggleBT6,toggleBT7;
 
@@ -48,7 +48,6 @@ public class StartActivity extends AppCompatActivity {
             // 21 버전 이상일 때 상태바 색상 변경
             getWindow().setStatusBarColor(Color.BLACK);
         }
-
 
         CitySP = (Spinner)findViewById(R.id.dropdown_spinner);
         CountrySP = (Spinner)findViewById(R.id.dropdown_country);
@@ -74,16 +73,20 @@ public class StartActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
 
+                    Fragment fragment = new MyInfo();
+                    Bundle bundle = new Bundle(3);
+                    bundle.putString("city_value",CityTV.getText().toString());
+                    bundle.putString("country_value",CountryTV.getText().toString());
+                    bundle.putString("town_value",TownTV.getText().toString());
+
+                    fragment.setArguments(bundle);
             }
         });
-
-
 
         CitySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 CityTV.setText(parent.getItemAtPosition(position).toString());
-
             }
 
             @Override

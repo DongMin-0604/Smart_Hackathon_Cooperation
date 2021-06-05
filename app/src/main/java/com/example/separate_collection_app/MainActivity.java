@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private long backkeyPressedTime = 0;
 
     private Toast toast;
+
+    Fragment plastic = new Fragment();
 
 
     @Override
@@ -49,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.main_frame,Search.newInstance()).commit();
+
 
         if (Build.VERSION.SDK_INT >= 21) {
             // 21 버전 이상일 때 상태바 색상 변경
@@ -92,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
         }else{
             Log.d("Is first Time?","not first");
         }
-
-
-
-
-
+    }
+    public void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main_frame,fragment).commit();
     }
 }
