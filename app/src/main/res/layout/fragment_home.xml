@@ -22,7 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--suppress AndroidUnresolvableTag -->
+
 
         <TextView
             android:id="@+id/Data_Display"
@@ -37,6 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
 
+        <!--suppress AndroidUnresolvableTag -->
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:id="@+id/calendar"
             android:layout_width="0dp"
