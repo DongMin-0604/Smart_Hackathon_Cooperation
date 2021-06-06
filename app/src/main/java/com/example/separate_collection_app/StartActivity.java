@@ -38,6 +38,8 @@ public class StartActivity extends AppCompatActivity {
 
     boolean check = false;
 
+    String  mon = null,sun = null,satur = null,fri = null,thurs = null,wednes = null,tues = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,7 +112,6 @@ public class StartActivity extends AppCompatActivity {
         toggleBT1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String mon = null;
                 if (isChecked){
                     mon = "월요일";
                     check = true;
@@ -128,7 +129,6 @@ public class StartActivity extends AppCompatActivity {
         toggleBT2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String tues = null;
                 if (isChecked){
                     tues = "화요일";
                     check = true;
@@ -146,7 +146,6 @@ public class StartActivity extends AppCompatActivity {
         toggleBT3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String wednes = null;
                 if (isChecked){
                     wednes = "수요일";
                     check = true;
@@ -164,7 +163,6 @@ public class StartActivity extends AppCompatActivity {
         toggleBT4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String thurs = null;
                 if (isChecked){
                     thurs = "목요일";
                     check = true;
@@ -182,7 +180,6 @@ public class StartActivity extends AppCompatActivity {
         toggleBT5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String fri = null;
                 if (isChecked){
                     fri = "금요일";
                     check = true;
@@ -200,7 +197,6 @@ public class StartActivity extends AppCompatActivity {
         toggleBT6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String satur = null;
                 if (isChecked){
                     satur = "토요일";
                     check = true;
@@ -218,7 +214,7 @@ public class StartActivity extends AppCompatActivity {
         toggleBT7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                String sun = null;
+
                 if (isChecked){
                     sun = "일요일";
                     check = true;

@@ -9,7 +9,6 @@
 
     <!--시작 화면(시,구,요일정보 입력 받는 창)  -->
 
-
     <ImageView
         android:id="@+id/Start_Title"
         android:layout_width="match_parent"
