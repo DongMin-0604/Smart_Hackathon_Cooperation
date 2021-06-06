@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
-
         if (System.currentTimeMillis() > backkeyPressedTime + 2000){
             backkeyPressedTime = System.currentTimeMillis();
 

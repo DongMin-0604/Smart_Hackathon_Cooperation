@@ -14,9 +14,9 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="350px"
+            android:layout_height="500px"
             android:gravity="center"
-            android:src="@drawable/logo1"
+            android:src="@drawable/logo5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
             android:id="@+id/Data_Display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="44dp"
             android:fontFamily="@font/wemakeprice_semibold"
             android:textColor="@color/white"
             android:textSize="23dp"
@@ -35,6 +35,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
 
+        <!--suppress AndroidUnresolvableTag -->
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendar"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.635"
+            app:mcv_selectionColor="#365773"
+            app:mcv_showOtherDates="all"
+            tools:ignore="MissingClass,MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
