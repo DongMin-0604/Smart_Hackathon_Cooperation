@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="플라스틱 카테고리 창 입니다."
+        android:text="음식물 카테고리 창 입니다."
         android:textSize="80px"
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="0dp" />

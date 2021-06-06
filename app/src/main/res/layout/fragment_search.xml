@@ -38,13 +38,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.183" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/plastic_garbage"
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="184dp"
             android:textColor="#ffffff"
-            android:backgroundTint="#429F6B"
+            android:background="@drawable/search_bt_background"
             android:text="플라스틱 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,26 +52,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Food_waste"
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="184dp"
-            android:backgroundTint="#429F6B"
-            android:textColor="#ffffff"
-            android:text="음식물 쓰레기"
+            android:background="@drawable/search_bt_background"
             android:fontFamily="@font/wemakeprice_semibold"
+            android:text="음식물 쓰레기"
+            android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.137"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cans_scrap_metal"
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="272dp"
-            android:backgroundTint="#429F6B"
+            android:background="@drawable/search_bt_background"
             android:textColor="#ffffff"
             android:text="캔,고철 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"
@@ -80,12 +80,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/paper_waste"
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="360dp"
-            android:backgroundTint="#429F6B"
+            android:background="@drawable/search_bt_background"
             android:textColor="#ffffff"
             android:text="종이류"
             android:fontFamily="@font/wemakeprice_semibold"
@@ -94,12 +94,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/plastic_trash"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/vinyl_trash"
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="360dp"
-            android:backgroundTint="#429F6B"
+            android:background="@drawable/search_bt_background"
             android:textColor="#ffffff"
             android:text="비닐 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"
@@ -108,12 +108,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/glass_bottle_trash"
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="272dp"
-            android:backgroundTint="#429F6B"
+            android:background="@drawable/search_bt_background"
             android:textColor="#ffffff"
             android:text="유리병 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"

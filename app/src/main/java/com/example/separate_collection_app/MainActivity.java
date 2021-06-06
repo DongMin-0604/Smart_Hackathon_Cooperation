@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
+
         if (System.currentTimeMillis() > backkeyPressedTime + 2000){
             backkeyPressedTime = System.currentTimeMillis();
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             android.os.Process.killProcess(android.os.Process.myPid());
             toast.cancel();
         }
+
     }
 
     @SuppressLint("ResourceAsColor")
