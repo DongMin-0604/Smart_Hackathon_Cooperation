@@ -2,12 +2,16 @@ package com.example.separate_collection_app;
 
 import android.annotation.SuppressLint;
 import android.app.FragmentManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -30,9 +34,11 @@ import java.util.List;
 
 public class StartActivity extends AppCompatActivity {
 
-
     private Spinner CitySP,CountrySP,TownSP;
     private TextView CityTV,CountryTV,TownTV;
+    String city_check,country_check,town_check;
+
+    ArrayAdapter<CharSequence> citysp1,citysp2;
 
     ToggleButton toggleBT1,toggleBT2,toggleBT3,toggleBT4,toggleBT5,toggleBT6,toggleBT7;
 
@@ -44,6 +50,9 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
+
+        citysp1 = ArrayAdapter.createFromResource(this,R.array.CityDropDown,R.layout.support_simple_spinner_dropdown_item);
+        citysp1.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
 //        타이틀바 없애는 코드
         ActionBar actionBar = getSupportActionBar();
@@ -75,12 +84,67 @@ public class StartActivity extends AppCompatActivity {
         CountrySP.setSelection(0);
         TownSP.setSelection(0);
 
+
         CitySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_Seoul,R.layout.support_simple_spinner_dropdown_item);
+                if (citysp1.getItem(position).equals("서울특별시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_Seoul,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("부산광역시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_busan,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("대구광역시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_daegu,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("인천광역시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_incheon,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("광주광역시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_gwangju,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("대전광역시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_deajeon,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("울산광역시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_woolsan,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("세종특별자치시")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_sejong,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("경기도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_gyeonggi,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("강원도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_gangwon,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("충청북도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_choongcheong_buk,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("충청남도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_choongcheong_nam,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("전라북도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_jeonla_buk,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("전라남도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_jeonla_nam,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }else if (citysp1.getItem(position).equals("경상북도")) {
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this, R.array.City_CountryDropDown_gyeongsang_buk, R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                } else if (citysp1.getItem(position).equals("경상남도")) {
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this, R.array.City_CountryDropDown_gyeongsang_nam, R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                } else if (citysp1.getItem(position).equals("제주특별자치도")){
+                    citysp2 = ArrayAdapter.createFromResource(StartActivity.this,R.array.City_CountryDropDown_jeju,R.layout.support_simple_spinner_dropdown_item);
+                    citysp2.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                }
+
+                CountrySP.setAdapter(citysp2);
                 CityTV.setText(parent.getItemAtPosition(position).toString());
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -89,8 +153,8 @@ public class StartActivity extends AppCompatActivity {
         CountrySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    CountryTV.setText(parent.getItemAtPosition(position).toString());
 
-                CountryTV.setText(parent.getItemAtPosition(position).toString());
             }
 
             @Override
@@ -230,15 +294,22 @@ public class StartActivity extends AppCompatActivity {
             }
         });
         GO_MAIN_BT.setOnClickListener(new View.OnClickListener() {
-            String city_check,country_check,town_check;
+
             @Override
             public void onClick(View v) {
                 city_check = CityTV.getText().toString();
                 country_check = CountryTV.getText().toString();
                 town_check = TownTV.getText().toString();
 
-                if (city_check.equals("--시") || country_check.equals("--구") || town_check.equals("--동")||check == false){
-                    Toast.makeText(getApplicationContext(),"잘못된 정보입니다.",Toast.LENGTH_SHORT).show();
+                if (city_check.equals("--시/도") || country_check.equals("--시/군/구") || town_check.equals("--동")||check == false){
+                    String str = CityTV.getText().toString();
+                    if (str.equals("세종특별자치시")){
+                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(intent);
+
+                    }else {
+                        Toast.makeText(getApplicationContext(),"잘못된 정보입니다.",Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
@@ -250,8 +321,10 @@ public class StartActivity extends AppCompatActivity {
                     bundle.putString("town_value",TownTV.getText().toString());
 
                     fragment.setArguments(bundle);
+
                 }
             }
         });
     }
+
 }

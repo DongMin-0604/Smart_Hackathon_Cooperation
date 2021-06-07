@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }else{
             Log.d("Is first Time?","not first");
+
         }
     }
     public void replaceFragment(Fragment fragment){

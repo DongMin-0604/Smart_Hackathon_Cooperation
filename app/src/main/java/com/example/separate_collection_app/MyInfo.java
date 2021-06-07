@@ -22,9 +22,6 @@ public class MyInfo extends Fragment {
 
     Button setting_BT;
 
-    String text;
-    String text2;
-    String text3;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_my_info, container, false);
@@ -34,16 +31,8 @@ public class MyInfo extends Fragment {
         Town_TV2 = (TextView) v.findViewById(R.id.town_temp1);
         setting_BT = (Button)v.findViewById(R.id.myinfo_setting);
 
-        Bundle bundle = getArguments();
 
-        if (bundle != null) {
-            text = bundle.getString("city_value".toString());
-            text2 = bundle.getString("country_value".toString());
-            text3 = bundle.getString("town_value".toString());
-        }
-        City_TV2.setText(text);
-        Country_TV2.setText(text2);
-        Town_TV2.setText(text3);
+
 
         setting_BT.setOnClickListener(new View.OnClickListener() {
             @Override

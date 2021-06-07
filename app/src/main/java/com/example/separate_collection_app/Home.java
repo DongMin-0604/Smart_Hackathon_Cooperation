@@ -16,7 +16,10 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
+import com.google.android.material.datepicker.MaterialCalendar;
+
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
@@ -40,6 +43,8 @@ public class Home extends Fragment {
         TV_Date.setText("오늘은 "+getTime()+" 입니다.");
 
 
+
+
         return v;
     }
 
@@ -48,6 +53,7 @@ public class Home extends Fragment {
         mDate = new Date(Time);
         return mFormat.format(mDate);
     }
+
 
 
 
