@@ -1,7 +1,6 @@
 package com.example.separate_collection_app;
 
 import android.annotation.SuppressLint;
-import android.app.FragmentManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -26,6 +25,8 @@ import android.widget.ToggleButton;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -45,12 +46,12 @@ public class StartActivity extends AppCompatActivity {
     boolean check = false;
 
     String  mon = null,sun = null,satur = null,fri = null,thurs = null,wednes = null,tues = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
 
+//        Bundle bundle = new Bundle();
         citysp1 = ArrayAdapter.createFromResource(this,R.array.CityDropDown,R.layout.support_simple_spinner_dropdown_item);
         citysp1.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
@@ -144,6 +145,8 @@ public class StartActivity extends AppCompatActivity {
 
                 CountrySP.setAdapter(citysp2);
                 CityTV.setText(parent.getItemAtPosition(position).toString());
+
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -173,6 +176,8 @@ public class StartActivity extends AppCompatActivity {
 
             }
         });
+
+
         toggleBT1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -295,6 +300,7 @@ public class StartActivity extends AppCompatActivity {
         });
         GO_MAIN_BT.setOnClickListener(new View.OnClickListener() {
 
+
             @Override
             public void onClick(View v) {
                 city_check = CityTV.getText().toString();
@@ -304,6 +310,11 @@ public class StartActivity extends AppCompatActivity {
                 if (city_check.equals("--시/도") || country_check.equals("--시/군/구") || town_check.equals("--동")||check == false){
                     String str = CityTV.getText().toString();
                     if (str.equals("세종특별자치시")){
+
+//                        bundle.putString("str1",CityTV.getText().toString());
+//                        MyInfo myInfo = new MyInfo();
+//                        myInfo.setArguments(bundle);
+
                         Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(intent);
 
@@ -311,16 +322,13 @@ public class StartActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"잘못된 정보입니다.",Toast.LENGTH_SHORT).show();
                     }
                 }else{
+
+//                    bundle.putString("str1",CityTV.getText().toString());
+//                    MyInfo myInfo = new MyInfo();
+//                    myInfo.setArguments(bundle);
+
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
-
-                    Fragment fragment = new MyInfo();
-                    Bundle bundle = new Bundle(3);
-                    bundle.putString("city_value",CityTV.getText().toString());
-                    bundle.putString("country_value",CountryTV.getText().toString());
-                    bundle.putString("town_value",TownTV.getText().toString());
-
-                    fragment.setArguments(bundle);
 
                 }
             }

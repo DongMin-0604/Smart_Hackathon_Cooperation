@@ -3,6 +3,7 @@ package com.example.separate_collection_app;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,8 +20,18 @@ public class MyInfo extends Fragment {
     }
 
     TextView City_TV2,Country_TV2,Town_TV2;
+    String City_st;
 
     Button setting_BT;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        if (getArguments()!= null){
+//            City_st = getArguments().getString("str1");
+//
+//        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,7 +43,7 @@ public class MyInfo extends Fragment {
         setting_BT = (Button)v.findViewById(R.id.myinfo_setting);
 
 
-
+//        City_TV2.setText(City_st);
 
         setting_BT.setOnClickListener(new View.OnClickListener() {
             @Override
