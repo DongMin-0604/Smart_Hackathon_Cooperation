@@ -55,6 +55,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+
     <Spinner
         android:id="@+id/dropdown_spinner"
         android:layout_width="150dp"
@@ -64,10 +65,27 @@
         android:entries="@array/CityDropDown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.454" />
+
+    <TextView
+        android:id="@+id/city_info"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/wemakeprice_semibold"
+        android:gravity="center"
+        android:text="시/도 : "
+        android:textColor="#000000"
+        android:textSize="55px"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
 
     <Spinner
         android:id="@+id/dropdown_country"
@@ -80,36 +98,8 @@
         app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintVertical_bias="0.579" />
 
-    <Spinner
-        android:id="@+id/dropdown_town"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:background="@drawable/spinner_background"
-        android:entries="@array/TownDropDown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
-
-    <TextView
-        android:id="@+id/town_info"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:fontFamily="@font/wemakeprice_semibold"
-        android:gravity="center"
-        android:text="동 : "
-        android:textColor="#000000"
-        android:textSize="55px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
 
     <TextView
         android:id="@+id/country_info"
@@ -125,25 +115,7 @@
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
-
-    <TextView
-        android:id="@+id/city_info"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:fontFamily="@font/wemakeprice_semibold"
-        android:gravity="center"
-        android:text="시/도 : "
-        android:textColor="#000000"
-        android:textSize="55px"
-        android:textStyle=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396" />
-
+        app:layout_constraintVertical_bias="0.576" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -187,28 +159,7 @@
             android:width="250px"
             android:fontFamily="@font/wemakeprice_semibold"
             android:gravity="center"
-            android:text="--구"
-            android:textColor="@color/white"
-            android:textSize="44px"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:text="/"
-            android:textColor="@color/white"
-            android:textSize="40px" />
-
-        <TextView
-            android:id="@+id/town_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:width="250px"
-            android:fontFamily="@font/wemakeprice_semibold"
-            android:gravity="center"
-            android:text="--동"
+            android:text="--시/군/구"
             android:textColor="@color/white"
             android:textSize="44px"
             android:textStyle="bold" />

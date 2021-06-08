@@ -295,12 +295,4 @@
         <item>제주시</item>
         <item>서귀포시</item>
     </string-array>
-
-    <string-array name="TownDropDown">
-        <item>--동</item>
-        <item>상일동</item>
-        <item>성내동</item>
-        <item>천호동</item>
-        <item>길동</item>
-    </string-array>
 </resources>

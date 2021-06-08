@@ -65,10 +65,8 @@ public class StartActivity extends AppCompatActivity {
 
         CitySP = (Spinner)findViewById(R.id.dropdown_spinner);
         CountrySP = (Spinner)findViewById(R.id.dropdown_country);
-        TownSP = (Spinner)findViewById(R.id.dropdown_town);
         CityTV = (TextView)findViewById(R.id.city_temp);
         CountryTV  = (TextView)findViewById(R.id.country_temp);
-        TownTV = (TextView)findViewById(R.id.town_temp);
 
         toggleBT1 = (ToggleButton)findViewById(R.id.toggleButton1);
         toggleBT2 = (ToggleButton)findViewById(R.id.toggleButton2);
@@ -83,7 +81,6 @@ public class StartActivity extends AppCompatActivity {
 
         CitySP.setSelection(0);
         CountrySP.setSelection(0);
-        TownSP.setSelection(0);
 
 
         CitySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -165,18 +162,6 @@ public class StartActivity extends AppCompatActivity {
 
             }
         });
-        TownSP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                TownTV.setText(parent.getItemAtPosition(position).toString());
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
 
         toggleBT1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -305,9 +290,8 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 city_check = CityTV.getText().toString();
                 country_check = CountryTV.getText().toString();
-                town_check = TownTV.getText().toString();
 
-                if (city_check.equals("--시/도") || country_check.equals("--시/군/구") || town_check.equals("--동")||check == false){
+                if (city_check.equals("--시/도") || country_check.equals("--시/군/구") || check == false){
                     String str = CityTV.getText().toString();
                     if (str.equals("세종특별자치시")){
 
