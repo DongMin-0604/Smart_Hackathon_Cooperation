@@ -24,13 +24,76 @@
         app:layout_constraintVertical_bias="0.021" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="음식물 쓰레기"
+        android:textSize="65px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+
+    <!--    <ScrollView-->
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="음식물 카테고리 창 입니다."
-        android:textSize="80px"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="65dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_marginTop="60dp"-->
+<!--                android:text="음식물쓰레기" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="음식물쓰레기"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                />-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="음식물쓰레기"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                />-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="음식물쓰레기"-->
+<!--                android:layout_marginTop="10dp"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="음식물쓰레기"-->
+<!--                android:layout_marginTop="10dp"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="음식물쓰레기"-->
+<!--                android:layout_marginTop="10dp"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="음식물쓰레기"-->
+<!--                android:layout_marginTop="10dp"/>-->
+
+<!--         -->
+
+
+<!--        </LinearLayout>-->
+
+<!--    </ScrollView>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

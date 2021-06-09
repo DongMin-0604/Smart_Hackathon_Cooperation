@@ -18,6 +18,15 @@
 <!--   최초실행자에게만 보여지는 창 구현 완료했지만 코딩할때 편하도록 기능 비활성화     -->
 <!--        <activity android:name=".StartActivity"></activity>-->
         <activity android:name=".MainActivity"></activity>
+
+        <receiver android:name=".AlarmRecevier"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
