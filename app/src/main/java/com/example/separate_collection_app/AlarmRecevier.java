@@ -40,10 +40,10 @@ public class AlarmRecevier extends BroadcastReceiver {
         Intent intent2 = new Intent(context,MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context,101,intent2,PendingIntent.FLAG_UPDATE_CURRENT);
 
-        builder.setContentTitle("클린하우스");
-        builder.setSmallIcon(R.drawable.my_info_icon);
+        builder.setSmallIcon(R.drawable.ic_baseline_circle_notifications_24);
         builder.setAutoCancel(true);
-        builder.setContentText("오늘은 분리수거 요일입니다.");
+        builder.setContentText("오늘은 분리수거 요일입니다.\n지구를위해 올바른 분리수거를 실천합시다.");
+        builder.setStyle(new NotificationCompat.BigTextStyle().bigText("오늘은 분리수거 요일입니다.\n지구를위해 올바른 분리수거를 실천합시다.")).setPriority(Notification.PRIORITY_DEFAULT);
 
         builder.setContentIntent(pendingIntent);
 

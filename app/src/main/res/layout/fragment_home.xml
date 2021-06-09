@@ -23,21 +23,23 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+        <!--suppress AndroidUnresolvableTag -->
 
         <TextView
             android:id="@+id/Data_Display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             android:fontFamily="@font/wemakeprice_semibold"
             android:textColor="@color/white"
             android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@+id/calendar_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo" />
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.0" />
 
-        <!--suppress AndroidUnresolvableTag -->
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:id="@+id/calendar_view"
             android:layout_width="match_parent"

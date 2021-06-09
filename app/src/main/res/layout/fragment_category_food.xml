@@ -1,99 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#8cc54a ">
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_back"
-        android:layout_width="82dp"
-        android:layout_height="92px"
-        android:text="&lt; BACK"
-        android:textSize="40px"
-        android:gravity="center"
-        android:fontFamily="@font/wemakeprice_regular"
-        android:background="@drawable/back_bt_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="음식물 쓰레기"
-        android:textSize="65px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
-
-
-    <!--    <ScrollView-->
-        android:id="@+id/scrollview"
+    <ScrollView
+        android:id="@+id/Scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="63dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="65dp">
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical">-->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_marginTop="60dp"-->
-<!--                android:text="음식물쓰레기" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:text="음식물쓰레기"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                />-->
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:text="음식물쓰레기"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                />-->
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:text="음식물쓰레기"-->
-<!--                android:layout_marginTop="10dp"/>-->
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:text="음식물쓰레기"-->
-<!--                android:layout_marginTop="10dp"/>-->
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:text="음식물쓰레기"-->
-<!--                android:layout_marginTop="10dp"/>-->
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:text="음식물쓰레기"-->
-<!--                android:layout_marginTop="10dp"/>-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_back"
+                android:layout_width="72dp"
+                android:layout_height="82px"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/back_bt_background"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="center"
+                android:text="&lt; BACK"
+                android:textSize="40px" />
 
-<!--         -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/imcresoojin"
+                android:gravity="center"
+                android:text="음식물 쓰레기"
+                android:textColor="#000000"
+                android:textSize="65px" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000"
+                android:layout_marginTop="35dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/shellfish_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/crap"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="갑각류\n 게 껍데기,새우 껍데기 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/meat_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/go_gi1"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="육류\n 달걀,닭 뼈,비계 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/vegetables_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/fruits"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="채소류\n 채소뿌리,양파껍질 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fruits_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/fruits2"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="과일류\n 과일 씨앗,과일 껍질 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cereals_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/cereals"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="곡류\n 견과류껍데기,왕겨 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seafood_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/shell"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="어패류\n 조개껍데기,생선뼈 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Others_bt"
+                android:layout_width="385dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/category_bt_back"
+                android:bufferType="spannable"
+                android:drawableLeft="@drawable/other"
+                android:drawablePadding="40dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:gravity="left"
+                android:padding="6dp"
+                android:paddingLeft="30dp"
+                android:text="기타\n 고추장,티백 등등의 분리수거 방법"
+                android:textColor="#2F8354"
+                android:textSize="45px" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
-<!--        </LinearLayout>-->
-
-<!--    </ScrollView>-->
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
