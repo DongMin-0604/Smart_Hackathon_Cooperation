@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Separate_collection_app">
-        <activity android:name=".StartActivity">
+        <activity android:name=".StartActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--   최초실행자에게만 보여지는 창 구현 완료했지만 코딩할때 편하도록 기능 비활성화     -->
-<!--        <activity android:name=".StartActivity"></activity>-->
-        <activity android:name=".MainActivity"></activity>
+        <!--   최초실행자에게만 보여지는 창 구현 완료했지만 코딩할때 편하도록 기능 비활성화     -->
+<!--        <activity android:name=".StartActivity" android:screenOrientation="portrait"></activity>-->
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"></activity>
+
 
         <receiver android:name=".AlarmRecevier"
             android:enabled="true"
@@ -28,5 +29,6 @@
 
         </receiver>
     </application>
+
 
 </manifest>

@@ -65,6 +65,13 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
+        mon = null;
+        sun = null;
+        satur = null;
+        fri = null;
+        thurs = null;
+        wednes = null;
+        tues = null;
 
 
         citysp1 = ArrayAdapter.createFromResource(this,R.array.CityDropDown,R.layout.support_simple_spinner_dropdown_item);
