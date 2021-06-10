@@ -351,7 +351,7 @@ public class StartActivity extends AppCompatActivity {
         Intent ReceiberIntent = new Intent(StartActivity.this, AlarmRecevier.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(StartActivity.this, 0, ReceiberIntent, 0);
 
-        String from = "081600pm";
+        String from = "080000AM";
         int dayofweek = 0;
         SimpleDateFormat dateFormat1 = new SimpleDateFormat();
         Date datetime = null;
