@@ -369,55 +369,55 @@ public class StartActivity extends AppCompatActivity {
         if (calendar1.getTimeInMillis() < System.currentTimeMillis()){
             calendar1.add(Calendar.DAY_OF_YEAR,7);
         }
-        alarmManager.setRepeating(AlarmManager.RTC,calendar1.getTimeInMillis(),AlarmManager.INTERVAL_DAY*7,pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar1.getTimeInMillis(),AlarmManager.INTERVAL_DAY*7,pendingIntent);
 
 
     }
-    public void PushAlarmgive(){
+    public void PushAlarmgive() {
 
         Calendar calendar2 = Calendar.getInstance();
         int mDayOfWeek = calendar2.get(Calendar.DAY_OF_WEEK);
 
-        if (!TextUtils.isEmpty(sun)){
-            if (mDayOfWeek == 1){
+        if (!TextUtils.isEmpty(sun)) {
+            if (mDayOfWeek == 1) {
                 pushAlarm();
             }
         }
-        if (!TextUtils.isEmpty(mon)){
-            if (mDayOfWeek == 2){
+        if (!TextUtils.isEmpty(mon)) {
+            if (mDayOfWeek == 2) {
                 pushAlarm();
 
             }
         }
-        if (!TextUtils.isEmpty(tues)){
-            if (mDayOfWeek == 3){
+        if (!TextUtils.isEmpty(tues)) {
+            if (mDayOfWeek == 3) {
                 pushAlarm();
             }
 
         }
-        if (!TextUtils.isEmpty(wednes)){
-            if (mDayOfWeek == 4){
+        if (!TextUtils.isEmpty(wednes)) {
+            if (mDayOfWeek == 4) {
                 pushAlarm();
             }
 
         }
-        if (!TextUtils.isEmpty(thurs)){
-            if (mDayOfWeek == 5){
+        if (!TextUtils.isEmpty(thurs)) {
+            if (mDayOfWeek == 5) {
                 pushAlarm();
             }
 
         }
-        if (!TextUtils.isEmpty(fri) ){
-            if (mDayOfWeek == 6){
+        if (!TextUtils.isEmpty(fri)) {
+            if (mDayOfWeek == 6) {
                 pushAlarm();
             }
 
         }
-        if (!TextUtils.isEmpty(satur)){
-            if (mDayOfWeek == 7){
+        if (!TextUtils.isEmpty(satur)) {
+            if (mDayOfWeek == 7) {
                 pushAlarm();
             }
         }
     }
 
-}
+    }

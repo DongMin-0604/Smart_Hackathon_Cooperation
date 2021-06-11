@@ -44,7 +44,7 @@ public class AlarmRecevier extends BroadcastReceiver {
         builder.setAutoCancel(true);
         builder.setContentText("오늘은 분리수거 요일입니다.\n지구를위해 올바른 분리수거를 실천합시다.");
         builder.setStyle(new NotificationCompat.BigTextStyle().bigText("오늘은 분리수거 요일입니다.\n지구를위해 올바른 분리수거를 실천합시다.")).setPriority(Notification.PRIORITY_DEFAULT);
-
+       
         builder.setContentIntent(pendingIntent);
 
         Notification notification = builder.build();

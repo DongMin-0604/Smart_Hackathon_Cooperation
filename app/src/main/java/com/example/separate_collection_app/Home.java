@@ -48,7 +48,8 @@ public class Home extends Fragment{
         TV_Date = (TextView)v.findViewById(R.id.Data_Display);
         // Inflate the layout for this fragment
         TV_Date.setText("오늘은 "+getTime()+" 입니다.");
-        ((StartActivity)getActivity()).mon.toString();
+
+//        ((StartActivity)getActivity()).mon.toString();
 
             materialCalendarView.addDecorator(new MondayDecorator(getActivity()));
 

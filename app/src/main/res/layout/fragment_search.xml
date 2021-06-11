@@ -8,117 +8,108 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <androidx.appcompat.widget.SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/search_view"
-        app:iconifiedByDefault="false"
-        app:queryHint="검색어를 입력하시오"
-        android:layout_marginTop="30dp" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/search_layout"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▽ 원하시는 카테고리를 선택하세요. ▽"
             android:fontFamily="@font/imcresoojin"
+            android:text="▽ 원하시는 카테고리를 선택하세요. ▽"
             android:textAlignment="center"
             android:textColor="#2E8B57"
-            android:textSize="16dp"
-            android:textStyle="bold|italic"
+            android:textSize="23dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.183" />
+            app:layout_constraintVertical_bias="0.059" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/plastic_garbage"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="184dp"
-            android:textColor="#ffffff"
+            android:id="@+id/vinyl_trash"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="324dp"
             android:background="@drawable/search_bt_background"
-            android:text="플라스틱 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"
+            android:text="비닐 쓰레기"
+            android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintHorizontal_bias="0.896"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Food_waste"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="184dp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="168dp"
             android:background="@drawable/search_bt_background"
             android:fontFamily="@font/wemakeprice_semibold"
             android:text="음식물 쓰레기"
             android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plastic_garbage"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="168dp"
+            android:background="@drawable/search_bt_background"
+            android:fontFamily="@font/wemakeprice_semibold"
+            android:text="플라스틱 쓰레기"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.896"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cans_scrap_metal"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="272dp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="248dp"
             android:background="@drawable/search_bt_background"
-            android:textColor="#ffffff"
-            android:text="캔,고철 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"
+            android:text="캔,고철 쓰레기"
+            android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintHorizontal_bias="0.896"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/paper_waste"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="360dp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="324dp"
             android:background="@drawable/search_bt_background"
-            android:textColor="#ffffff"
+            android:fontFamily="@font/wemakeprice_semibold"
             android:text="종이류"
-            android:fontFamily="@font/wemakeprice_semibold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.137"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/vinyl_trash"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="360dp"
-            android:background="@drawable/search_bt_background"
             android:textColor="#ffffff"
-            android:text="비닐 쓰레기"
-            android:fontFamily="@font/wemakeprice_semibold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintHorizontal_bias="0.103"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/glass_bottle_trash"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="272dp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="248dp"
             android:background="@drawable/search_bt_background"
-            android:textColor="#ffffff"
-            android:text="유리병 쓰레기"
             android:fontFamily="@font/wemakeprice_semibold"
+            android:text="유리병 쓰레기"
+            android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintHorizontal_bias="0.103"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
