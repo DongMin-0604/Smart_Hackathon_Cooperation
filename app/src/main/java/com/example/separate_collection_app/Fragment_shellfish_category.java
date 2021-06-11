@@ -22,7 +22,7 @@ public class Fragment_shellfish_category extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_shellfish_category, null);
+        View v = inflater.inflate(R.layout.fragment_shellfish_category_select, null);
 
         back_BT = (Button)v.findViewById(R.id.bt_back);
 

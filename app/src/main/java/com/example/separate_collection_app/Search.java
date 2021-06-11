@@ -17,7 +17,7 @@ public class Search extends Fragment {
     }
 
     SearchView SV;
-    Button plastic_BT,Food_BT,glass_BT,can_BT,paper_BT,vinyl_BT;
+    Button plastic_BT,Food_BT,glass_BT,can_BT,paper_BT,vinyl_BT,other_BT;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class Search extends Fragment {
         glass_BT = (Button)v.findViewById(R.id.glass_bottle_trash);
         paper_BT = (Button)v.findViewById(R.id.paper_waste);
         vinyl_BT = (Button)v.findViewById(R.id.vinyl_trash);
+        other_BT = (Button)v.findViewById(R.id.other_trash) ;
 
 
         plastic_BT.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +67,12 @@ public class Search extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainActivity)getActivity()).replaceFragment(category_Vinyl.newInstance());
+            }
+        });
+        other_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).replaceFragment(category_Other.newInstance());
             }
         });
 

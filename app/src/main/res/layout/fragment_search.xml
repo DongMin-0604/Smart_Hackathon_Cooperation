@@ -106,12 +106,27 @@
             android:layout_marginTop="248dp"
             android:background="@drawable/search_bt_background"
             android:fontFamily="@font/wemakeprice_semibold"
-            android:text="유리병 쓰레기"
+            android:text="유리 쓰레기"
             android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.103"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/other_trash"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="396dp"
+            android:background="@drawable/search_bt_background"
+            android:fontFamily="@font/wemakeprice_semibold"
+            android:text="기타 쓰레기"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 public class category_Plastic extends Fragment {
 
-    Button back_BT;
+    Button back_BT, straw_BT;
 
     public static category_Plastic newInstance(){
         return new category_Plastic();
@@ -23,6 +23,7 @@ public class category_Plastic extends Fragment {
         View v = inflater.inflate(R.layout.fragment_category_plastic, null);
 
         back_BT = (Button)v.findViewById(R.id.bt_back);
+        straw_BT = (Button)v.findViewById(R.id.straw_bt);
 
         back_BT.setOnClickListener(new View.OnClickListener() {
 
@@ -30,6 +31,13 @@ public class category_Plastic extends Fragment {
             public void onClick(View v) {
                 ((MainActivity)getActivity()).replaceFragment(Search.newInstance());
 
+            }
+        });
+
+        straw_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).replaceFragment(category_straw.newInstance());
             }
         });
 

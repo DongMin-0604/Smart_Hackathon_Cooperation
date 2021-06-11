@@ -58,9 +58,9 @@ public class Home extends Fragment{
         materialCalendarView.addDecorator(new SaturdayDecorator());
         materialCalendarView.addDecorator(new OneDayDecorator());
 //        materialCalendarView.addDecorator(new TuesdayDecorator(getActivity()));
-//        materialCalendarView.addDecorator(new weddayDecorator(getActivity()));
+        materialCalendarView.addDecorator(new weddayDecorator(getActivity()));
 //        materialCalendarView.addDecorator(new ThudayDecorator(getActivity()));
-//        materialCalendarView.addDecorator(new FridayDecorator(getActivity()));
+        materialCalendarView.addDecorator(new FridayDecorator(getActivity()));
 //        materialCalendarView.addDecorator(new Sat_select_dayDecorator(getActivity()));
 //        materialCalendarView.addDecorator(new Sun_select_dayDecorator(getActivity()));
 
