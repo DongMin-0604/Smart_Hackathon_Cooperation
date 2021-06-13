@@ -1,17 +1,13 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.Activity;
 
-import android.annotation.SuppressLint;
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -19,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.ListPopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,19 +23,15 @@ import android.widget.ToggleButton;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
+import com.example.separate_collection_app.AlarmRecevier;
+import com.example.separate_collection_app.R;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.List;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -316,7 +307,7 @@ public class StartActivity extends AppCompatActivity {
 //                        bundle.putString("str1",CityTV.getText().toString());
 //                        MyInfo myInfo = new MyInfo();
 //                        myInfo.setArguments(bundle);
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
 
                     }else {
@@ -351,7 +342,7 @@ public class StartActivity extends AppCompatActivity {
         Intent ReceiberIntent = new Intent(StartActivity.this, AlarmRecevier.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(StartActivity.this, 0, ReceiberIntent, 0);
 
-        String from = "080000AM";
+        String from = "003900AM";
         int dayofweek = 0;
         SimpleDateFormat dateFormat1 = new SimpleDateFormat();
         Date datetime = null;

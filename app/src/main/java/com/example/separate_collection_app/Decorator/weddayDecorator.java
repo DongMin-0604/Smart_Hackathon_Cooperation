@@ -1,23 +1,23 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.Decorator;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
+import com.example.separate_collection_app.R;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;
 
 import java.util.Calendar;
-import java.util.Collection;
 
-public class MondayDecorator implements DayViewDecorator {
+public class weddayDecorator implements DayViewDecorator {
 
     private final Drawable drawable;
     private int color;
     private final Calendar calendar= Calendar.getInstance();
 
 
-    public MondayDecorator(Activity context) {
+    public weddayDecorator(Activity context) {
         drawable = context.getResources().getDrawable(R.drawable.calender_background);
 
     }
@@ -26,7 +26,7 @@ public class MondayDecorator implements DayViewDecorator {
     public boolean shouldDecorate(CalendarDay day) {
         day.copyTo(calendar);
         int weekday = calendar.get(Calendar.DAY_OF_WEEK);
-        return weekday == Calendar.MONDAY;
+        return weekday == Calendar.WEDNESDAY;
     }
 
     @Override

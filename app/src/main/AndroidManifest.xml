@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Separate_collection_app">
-        <activity android:name=".StartActivity" android:screenOrientation="portrait">
+        <activity android:name=".Activity.StartActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -17,7 +17,7 @@
         </activity>
         <!--   최초실행자에게만 보여지는 창 구현 완료했지만 코딩할때 편하도록 기능 비활성화     -->
 <!--        <activity android:name=".StartActivity" android:screenOrientation="portrait"></activity>-->
-        <activity android:name=".MainActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity.MainActivity" android:screenOrientation="portrait"></activity>
 
 
         <receiver android:name=".AlarmRecevier"
@@ -31,7 +31,7 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@drawable/ic_baseline_circle_notifications_24"/>
-        <service android:name=".StartActivity" />
+        <service android:name=".Activity.StartActivity" />
     </application>
 
 

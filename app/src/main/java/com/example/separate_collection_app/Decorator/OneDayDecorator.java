@@ -1,4 +1,4 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.Decorator;
 
 import android.graphics.Color;
 import android.graphics.Typeface;

@@ -70,7 +70,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="깨진 유리"
+                    android:text="냄비뚜껑(강화유리)"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -79,7 +79,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="냄비받침(유리)"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
@@ -106,50 +106,16 @@
                     android:text="도자기"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
+                    android:layout_marginRight="190dp"
                     />
             </LinearLayout>
-            <TextView
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="- ㉤~㉥ "
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/imcresoojin"
-                android:textColor="@color/black"
-                android:textAlignment="textStart"
-                />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    />
-            </LinearLayout>
+                android:layout_marginTop="15dp"/>
             <TextView
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
@@ -169,7 +135,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="유리병"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -178,7 +144,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="유리판"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
@@ -198,22 +164,15 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginTop="15dp">
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="체중계(유리)"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
+                    android:layout_marginRight="190dp"
                     />
             </LinearLayout>
             <TextView
@@ -235,7 +194,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="컵"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -244,7 +203,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="커피포트(유리)"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
@@ -268,7 +227,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="폐형광등"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -277,7 +236,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="화분"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />

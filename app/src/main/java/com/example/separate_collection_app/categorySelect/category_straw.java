@@ -1,4 +1,4 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.categorySelect;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -15,6 +15,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.separate_collection_app.Activity.MainActivity;
+import com.example.separate_collection_app.R;
+import com.example.separate_collection_app.category.category_Plastic;
 
 public class category_straw extends Fragment {
 

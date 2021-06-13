@@ -12,6 +12,8 @@ import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
+import com.example.separate_collection_app.Activity.MainActivity;
+
 public class AlarmRecevier extends BroadcastReceiver {
     public AlarmRecevier(){ }
 
@@ -37,7 +39,7 @@ public class AlarmRecevier extends BroadcastReceiver {
             builder = new NotificationCompat.Builder(context);
         }
 
-        Intent intent2 = new Intent(context,MainActivity.class);
+        Intent intent2 = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context,101,intent2,PendingIntent.FLAG_UPDATE_CURRENT);
 
         builder.setSmallIcon(R.drawable.ic_baseline_circle_notifications_24);

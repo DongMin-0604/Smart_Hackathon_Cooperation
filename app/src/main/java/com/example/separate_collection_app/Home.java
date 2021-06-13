@@ -1,30 +1,25 @@
 package com.example.separate_collection_app;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
-import com.google.android.material.datepicker.MaterialCalendar;
+import com.example.separate_collection_app.Decorator.FridayDecorator;
+import com.example.separate_collection_app.Decorator.MondayDecorator;
+import com.example.separate_collection_app.Decorator.OneDayDecorator;
+import com.example.separate_collection_app.Decorator.SaturdayDecorator;
+import com.example.separate_collection_app.Decorator.SundayDecorator;
+import com.example.separate_collection_app.Decorator.weddayDecorator;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-
-import static android.content.Context.INPUT_METHOD_SERVICE;
 
 
 public class Home extends Fragment{
@@ -51,9 +46,8 @@ public class Home extends Fragment{
 
 //        ((StartActivity)getActivity()).mon.toString();
 
-            materialCalendarView.addDecorator(new MondayDecorator(getActivity()));
 
-
+        materialCalendarView.addDecorator(new MondayDecorator(getActivity()));
         materialCalendarView.addDecorator(new SundayDecorator());
         materialCalendarView.addDecorator(new SaturdayDecorator());
         materialCalendarView.addDecorator(new OneDayDecorator());

@@ -1,4 +1,4 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,11 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.separate_collection_app.Activity.MainActivity;
+import com.example.separate_collection_app.R;
+import com.example.separate_collection_app.Search;
+import com.example.separate_collection_app.categorySelect.category_straw;
 
 public class category_Plastic extends Fragment {
 

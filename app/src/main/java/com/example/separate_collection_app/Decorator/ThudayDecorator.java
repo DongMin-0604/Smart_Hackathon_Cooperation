@@ -1,8 +1,9 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.Decorator;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
+import com.example.separate_collection_app.R;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;

@@ -1,4 +1,4 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,17 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class category_Glass extends Fragment {
+import com.example.separate_collection_app.Activity.MainActivity;
+import com.example.separate_collection_app.R;
+import com.example.separate_collection_app.Search;
+
+public class category_Vinyl extends Fragment {
 
     Button back_BT;
 
-    public static category_Glass newInstance(){
-        return new category_Glass();
+    public static category_Vinyl newInstance(){
+        return new category_Vinyl();
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_category_glass, null);
+        View v = inflater.inflate(R.layout.fragment_category_vinyl, null);
 
         back_BT = (Button)v.findViewById(R.id.bt_back);
 

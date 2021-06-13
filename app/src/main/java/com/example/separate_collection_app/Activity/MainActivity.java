@@ -1,4 +1,4 @@
-package com.example.separate_collection_app;
+package com.example.separate_collection_app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -18,6 +18,10 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.separate_collection_app.Home;
+import com.example.separate_collection_app.MyInfo;
+import com.example.separate_collection_app.R;
+import com.example.separate_collection_app.Search;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.main_frame,Search.newInstance()).commit();
+        fragmentTransaction.add(R.id.main_frame, Search.newInstance()).commit();
 
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isFirst",true);
             editor.commit();
 
-            Intent intent = new Intent(getApplicationContext(),StartActivity.class);
+            Intent intent = new Intent(getApplicationContext(), StartActivity.class);
             startActivity(intent);
         }else{
             Log.d("Is first Time?","not first");

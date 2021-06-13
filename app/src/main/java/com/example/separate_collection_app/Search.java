@@ -10,6 +10,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SearchView;
 
+import com.example.separate_collection_app.Activity.MainActivity;
+import com.example.separate_collection_app.category.category_Can;
+import com.example.separate_collection_app.category.category_Food;
+import com.example.separate_collection_app.category.category_Glass;
+import com.example.separate_collection_app.category.category_Other;
+import com.example.separate_collection_app.category.category_Plastic;
+import com.example.separate_collection_app.category.category_Vinyl;
+import com.example.separate_collection_app.category.category_paper;
+
 public class Search extends Fragment {
 
     public static Search newInstance(){
