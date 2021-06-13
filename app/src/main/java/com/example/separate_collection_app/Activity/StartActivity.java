@@ -68,9 +68,6 @@ public class StartActivity extends AppCompatActivity {
         citysp1 = ArrayAdapter.createFromResource(this,R.array.CityDropDown,R.layout.support_simple_spinner_dropdown_item);
         citysp1.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
-//        타이틀바 없애는 코드
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
         if (Build.VERSION.SDK_INT >= 21) {
             // 21 버전 이상일 때 상태바 색상 변경
             getWindow().setStatusBarColor(Color.BLACK);

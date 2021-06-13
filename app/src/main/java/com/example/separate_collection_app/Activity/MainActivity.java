@@ -68,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.BLACK);
         }
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
         bottomNavigationView = findViewById(R.id.bottomNavi);
 
