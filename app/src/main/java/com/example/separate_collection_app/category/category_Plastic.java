@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
 import com.example.separate_collection_app.Search;
-import com.example.separate_collection_app.categorySelect.category_straw;
+import com.example.separate_collection_app.Select_plastic.category_straw;
 
 public class category_Plastic extends Fragment {
 

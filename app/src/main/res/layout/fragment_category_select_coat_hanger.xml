@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/imcresoojin"
                 android:gravity="center"
-                android:text="빨대"
+                android:text="옷걸이(철)"
                 android:textColor="#000000"
                 android:textSize="75px" />
 
@@ -72,7 +72,7 @@
                 />
 
             <TextView
-                android:id="@+id/straw_tv"
+                android:id="@+id/info_tv"
                 android:layout_marginTop="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 android:textSize="56px"
                 />
             <TextView
-                android:id="@+id/straw_tv2"
+                android:id="@+id/warning_tv2"
                 android:layout_marginTop="210dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
