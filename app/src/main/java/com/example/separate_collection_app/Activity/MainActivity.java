@@ -16,6 +16,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.separate_collection_app.Home;
@@ -26,12 +29,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+
     private long backkeyPressedTime = 0;
 
     private Toast toast;
 
-    Fragment plastic = new Fragment();
+    private View Home_LO,Category_LO,myinfo_LO;
 
+    FrameLayout main_frame;
+
+    Button home_home_BT,home_category_BT,home_info_BT,categor_home_BT,category_category_BT,category_info_BT,info_home_BT,info_category_BT,info_info_BT;
 
     @Override
     public void onBackPressed() {
@@ -62,34 +69,144 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.main_frame, Search.newInstance()).commit();
 
+        Home_LO = findViewById(R.id.Home_layout);
+        Category_LO = findViewById(R.id.category_layout);
+        myinfo_LO = findViewById(R.id.myinfo_layout);
+
+        home_home_BT = (Button)findViewById(R.id.home_home_bt);
+        home_category_BT = (Button)findViewById(R.id.home_category_bt);
+        home_info_BT = (Button)findViewById(R.id.home_info_bt);
+
+        categor_home_BT = (Button)findViewById(R.id.category_home_bt);
+        category_category_BT = (Button)findViewById(R.id.category_category_bt);
+        category_info_BT = (Button)findViewById(R.id.category_info_bt);
+
+        info_home_BT  = (Button)findViewById(R.id.info_home_bt);
+        info_category_BT = (Button)findViewById(R.id.info_category_bt);
+        info_info_BT = (Button)findViewById(R.id.info_info_bt);
+
+        Home_LO.setVisibility(View.VISIBLE);
+
+
 
         if (Build.VERSION.SDK_INT >= 21) {
             // 21 버전 이상일 때 상태바 색상 변경
             getWindow().setStatusBarColor(Color.BLACK);
         }
 
-
-        bottomNavigationView = findViewById(R.id.bottomNavi);
-
-        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new Home()).commit();
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        home_home_BT.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.item_fragment1:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Home()).commit();
-                        break;
-                    case R.id.item_fragment2:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Search()).commit();
-                        break;
-                    case R.id.item_fragment3:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyInfo()).commit();
-                        break;
-                    }
-                return true;
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.VISIBLE);
+                Category_LO.setVisibility(View.INVISIBLE);
+                myinfo_LO.setVisibility(View.INVISIBLE);
             }
         });
+        categor_home_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.VISIBLE);
+                Category_LO.setVisibility(View.INVISIBLE);
+                myinfo_LO.setVisibility(View.INVISIBLE);
+            }
+        });
+        info_home_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.VISIBLE);
+                Category_LO.setVisibility(View.INVISIBLE);
+                myinfo_LO.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        home_category_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.INVISIBLE);
+                Category_LO.setVisibility(View.VISIBLE);
+                myinfo_LO.setVisibility(View.INVISIBLE);
+            }
+        });
+        category_category_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.INVISIBLE);
+                Category_LO.setVisibility(View.VISIBLE);
+                myinfo_LO.setVisibility(View.INVISIBLE);
+            }
+        });
+        info_category_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.INVISIBLE);
+                Category_LO.setVisibility(View.VISIBLE);
+                myinfo_LO.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        home_info_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.INVISIBLE);
+                Category_LO.setVisibility(View.INVISIBLE);
+                myinfo_LO.setVisibility(View.VISIBLE);
+            }
+        });
+        category_info_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.INVISIBLE);
+                Category_LO.setVisibility(View.INVISIBLE);
+                myinfo_LO.setVisibility(View.VISIBLE);
+            }
+        });
+        info_info_BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Home_LO.setVisibility(View.INVISIBLE);
+                Category_LO.setVisibility(View.INVISIBLE);
+                myinfo_LO.setVisibility(View.VISIBLE);
+            }
+        });
+
+//        bottomNavigationView = findViewById(R.id.bottomNavi);
+//        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new Home()).commit();
+//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+//
+//                switch (item.getItemId()){
+//                    case R.id.item_1:
+//                       getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Home()).commit();
+//                       Home_LO.setVisibility(View.VISIBLE);
+//                        Category_LO.setVisibility(View.INVISIBLE);
+//                       myinfo_LO.setVisibility(View.INVISIBLE);
+//                        main_frame.addView(Home_LO);
+//                        main_frame.removeViewInLayout(Category_LO);
+//                        main_frame.removeViewInLayout(myinfo_LO);
+//                        break;
+//                    case R.id.item_2:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Search()).commit();
+//                        Category_LO.setVisibility(View.VISIBLE);
+//                        myinfo_LO.setVisibility(View.INVISIBLE);
+//                        Home_LO.setVisibility(View.INVISIBLE);
+//                        main_frame.addView(Category_LO);
+//                        main_frame.removeViewInLayout(Home_LO);
+//                        main_frame.removeViewInLayout(myinfo_LO);
+//                        break;
+//                    case R.id.item_3:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MyInfo()).commit();
+//                        myinfo_LO.setVisibility(View.VISIBLE);
+//                        Home_LO.setVisibility(View.INVISIBLE);
+//                        Category_LO.setVisibility(View.INVISIBLE);
+//                        main_frame.addView(myinfo_LO);
+//                        main_frame.removeViewInLayout(Home_LO);
+//                        main_frame.removeViewInLayout(Category_LO);
+//                        break;
+//                    }
+//                return true;
+//            }
+//        });
         SharedPreferences pref = getSharedPreferences("IsFirst", Activity.MODE_PRIVATE);
         boolean first = pref.getBoolean("isFirst",false);
         if (first == false){
@@ -105,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
     public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

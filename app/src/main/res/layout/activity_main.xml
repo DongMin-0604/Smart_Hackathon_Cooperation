@@ -4,28 +4,499 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity"
-    android:background="@color/back_color">
+    android:background="@color/back_color"
+    tools:context=".Activity.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Activity.MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="#fff"
-        app:itemIconTint="@drawable/menu_select_color"
-        app:itemTextColor="@drawable/menu_select_color"
-        app:menu="@menu/bottom_nv"
-         />
-        <FrameLayout
-            android:id="@+id/main_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </RelativeLayout>
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottomNavi"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:background="#fff"-->
+    <!--        app:itemIconTint="@drawable/menu_select_color"-->
+    <!--        app:itemTextColor="@drawable/menu_select_color"-->
+    <!--        app:menu="@menu/bottom_nv"-->
+    <!--         />-->
+            <FrameLayout
+                android:id="@+id/main_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Home_layout"
+                    android:visibility="visible">
+                    <LinearLayout
+                        android:id="@+id/bottom_navi_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="669dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Home"
+                            android:id="@+id/home_home_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_home_24"
+                            android:textColor="#8CC54A"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Category"
+                            android:id="@+id/home_category_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_article_no_press"
+                            android:textColor="#958F8F"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Myinfo"
+                            android:id="@+id/home_info_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_info_no_press"
+                            android:textColor="#958F8F"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="500px"
+                        android:gravity="center"
+                        android:src="@drawable/logo5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Data_Display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:textColor="@color/white"
+                        android:textSize="23dp"
+                        app:layout_constraintBottom_toTopOf="@+id/calendar_view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logo"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                        android:id="@+id/calendar_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.597"
+                        app:mcv_selectionColor="#3f962c"
+                        app:mcv_showOtherDates="all" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/category_layout"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/bottom_navi_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="669dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Home"
+                            android:id="@+id/category_home_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_home_no_press"
+                            android:textColor="#958F8F"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Category"
+                            android:id="@+id/category_category_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_article_24"
+                            android:textColor="#8CC54A"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Myinfo"
+                            android:id="@+id/category_info_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_info_no_press"
+                            android:textColor="#958F8F"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/imcresoojin"
+                        android:text="▽ 원하시는 카테고리를 선택하세요. ▽"
+                        android:textAlignment="center"
+                        android:textColor="#2E8B57"
+                        android:textSize="23dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.059" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/vinyl_trash"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="324dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="비닐 쓰레기"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.896"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/Food_waste"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="168dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="음식물 쓰레기"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.103"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/plastic_garbage"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="168dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="플라스틱 쓰레기"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.896"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cans_scrap_metal"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="248dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="캔,고철 쓰레기"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.896"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/paper_waste"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="324dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="종이류"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.103"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/glass_bottle_trash"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="248dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="유리 쓰레기"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.103"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/other_trash"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="396dp"
+                        android:background="@drawable/search_bt_background"
+                        android:fontFamily="@font/wemakeprice_semibold"
+                        android:text="기타 쓰레기"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/myinfo_layout"
+                    android:visibility="invisible">
+                    <LinearLayout
+                        android:id="@+id/bottom_navi_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="669dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Home"
+                            android:id="@+id/info_home_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_home_no_press"
+                            android:textColor="#958F8F"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Category"
+                            android:id="@+id/info_category_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_article_no_press"
+                            android:textColor="#958F8F"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:text="Myinfo"
+                            android:id="@+id/info_info_bt"
+                            android:textAllCaps="false"
+                            android:drawableTop="@drawable/ic_baseline_info_24"
+                            android:textColor="#8CC54A"
+                            style="?android:attr/borderlessButtonStyle"
+                            />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="660dp"
+                        android:background="@drawable/layout_boder"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.021">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/my_info_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.048"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.013" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="내 정보"
+                            android:fontFamily="@font/imcresoojin"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="90px"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.287"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.035" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.17" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/city_temp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:width="250px"
+                                android:gravity="center"
+                                android:text="--시"
+                                android:textColor="@color/white"
+                                android:textSize="44px"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:text="/"
+                                android:textColor="@color/white"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:id="@+id/country_temp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:width="250px"
+                                android:gravity="center"
+                                android:text="--구"
+                                android:textColor="@color/white"
+                                android:textSize="44px"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:text="/"
+                                android:textColor="@color/white"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:id="@+id/town_temp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:width="250px"
+                                android:gravity="center"
+                                android:text="--동"
+                                android:textColor="@color/white"
+                                android:textSize="44px"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/imcresoojin"
+                            android:gravity="center"
+                            android:text="당신의 분리수거 요일은"
+                            android:textColor="#000000"
+                            android:textSize="50px"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.501" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/myinfo_setting"
+                            android:layout_width="300dp"
+                            android:layout_height="150px"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/toggle_bt_background"
+                            android:drawableLeft="@drawable/myinfo_bt_backgroud"
+                            android:fontFamily="@font/imcresoojin"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="정보 수정하기"
+                            android:textColor="@color/black"
+                            android:textSize="45px"
+                            android:textStyle="bold|normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.494"
+                            app:layout_constraintStart_toStartOf="@+id/textView4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.91" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

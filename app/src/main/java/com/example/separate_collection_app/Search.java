@@ -42,49 +42,49 @@ public class Search extends Fragment {
         other_BT = (Button)v.findViewById(R.id.other_trash) ;
 
 
-        plastic_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_Plastic.newInstance());
-            }
-        });
-        Food_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_Food.newInstance());
-            }
-        });
-        can_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_Can.newInstance());
-            }
-        });
-        glass_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_Glass.newInstance());
-            }
-        });
-        paper_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_paper.newInstance());
-            }
-        });
-        vinyl_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_Vinyl.newInstance());
-            }
-        });
-        other_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_Other.newInstance());
-            }
-        });
-
+//        plastic_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_Plastic.newInstance());
+//            }
+//        });
+//        Food_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_Food.newInstance());
+//            }
+//        });
+//        can_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_Can.newInstance());
+//            }
+//        });
+//        glass_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_Glass.newInstance());
+//            }
+//        });
+//        paper_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_paper.newInstance());
+//            }
+//        });
+//        vinyl_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_Vinyl.newInstance());
+//            }
+//        });
+//        other_BT.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ((MainActivity)getActivity()).replaceFragment(category_Other.newInstance());
+//            }
+//        });
+//
 
         return v;
     }
