@@ -1,5 +1,6 @@
 package com.example.separate_collection_app.category;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
-import com.example.separate_collection_app.Search;
 import com.example.separate_collection_app.Select_plastic.category_straw;
 
 public class category_Plastic extends Fragment {
@@ -34,7 +34,8 @@ public class category_Plastic extends Fragment {
 
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(Search.newInstance());
+                Intent intent_plastic =new Intent(getActivity(),MainActivity.class);
+                startActivity(intent_plastic);
 
             }
         });

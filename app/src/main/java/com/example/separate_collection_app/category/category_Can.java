@@ -1,5 +1,6 @@
 package com.example.separate_collection_app.category;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
-import com.example.separate_collection_app.Search;
 import com.example.separate_collection_app.Select_can.category_butane;
 import com.example.separate_collection_app.Select_can.category_canned_food;
 import com.example.separate_collection_app.Select_can.category_cans;
@@ -114,7 +114,8 @@ public class category_Can extends Fragment {
 
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(Search.newInstance());
+                Intent intent_can =new Intent(getActivity(),MainActivity.class);
+                startActivity(intent_can);
 
             }
         });

@@ -29,57 +29,58 @@
                     android:layout_height="match_parent"
                     android:id="@+id/Home_layout"
                     android:visibility="visible">
+
                     <LinearLayout
                         android:id="@+id/bottom_navi_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="669dp"
+                        android:background="@color/white"
                         android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:background="@color/white">
+                        app:layout_constraintVertical_bias="1.0">
 
                         <androidx.appcompat.widget.AppCompatButton
-                            android:layout_width="match_parent"
-                            android:layout_height="66dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:text="Home"
                             android:id="@+id/home_home_bt"
-                            android:textAllCaps="false"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
                             android:drawableTop="@drawable/ic_baseline_home_24"
-                            android:textColor="#8CC54A"
-                            style="?android:attr/borderlessButtonStyle"
-                            />
+                            android:text="Home"
+                            android:textAllCaps="false"
+                            android:textColor="#8CC54A" />
+
                         <androidx.appcompat.widget.AppCompatButton
-                            android:layout_width="match_parent"
-                            android:layout_height="66dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:text="Category"
                             android:id="@+id/home_category_bt"
-                            android:textAllCaps="false"
-                            android:drawableTop="@drawable/ic_baseline_article_no_press"
-                            android:textColor="#958F8F"
                             style="?android:attr/borderlessButtonStyle"
-                            />
-                        <androidx.appcompat.widget.AppCompatButton
                             android:layout_width="match_parent"
                             android:layout_height="66dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/white"
-                            android:text="Myinfo"
-                            android:id="@+id/home_info_bt"
+                            android:drawableTop="@drawable/ic_baseline_article_no_press"
+                            android:text="Category"
                             android:textAllCaps="false"
-                            android:drawableTop="@drawable/ic_baseline_info_no_press"
-                            android:textColor="#958F8F"
+                            android:textColor="#958F8F" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/home_info_bt"
                             style="?android:attr/borderlessButtonStyle"
-                            />
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/white"
+                            android:drawableTop="@drawable/ic_baseline_info_no_press"
+                            android:text="Myinfo"
+                            android:textAllCaps="false"
+                            android:textColor="#958F8F" />
                     </LinearLayout>
 
-                    <ImageView
+                                        <ImageView
                         android:id="@+id/logo"
                         android:layout_width="match_parent"
                         android:layout_height="500px"
@@ -129,10 +130,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="669dp"
                         android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
                         android:background="@color/white">
 
                         <androidx.appcompat.widget.AppCompatButton
@@ -296,12 +299,13 @@
                         android:id="@+id/bottom_navi_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="669dp"
                         android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
                         android:background="@color/white">
 
                         <androidx.appcompat.widget.AppCompatButton

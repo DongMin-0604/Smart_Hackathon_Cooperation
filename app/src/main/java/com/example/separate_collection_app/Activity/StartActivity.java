@@ -1,5 +1,6 @@
 package com.example.separate_collection_app.Activity;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -317,21 +318,8 @@ public class StartActivity extends AppCompatActivity {
                 }
             }
         });
-//        Bundle bundle = new Bundle();
-//        MyInfo myInfo = new MyInfo();
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction ft = fragmentManager.beginTransaction();
-//
-//
-//        bundle.putString("str1",sun);
-//        bundle.putString("str2",mon);
-//        bundle.putString("str3",tues);
-//        bundle.putString("str4",thurs);
-//        bundle.putString("str5",satur);
-//        bundle.putString("str6",fri);
-//        bundle.putString("str7",wednes);
-//        myInfo.setArguments(bundle);
-//        ft.commit();
+
+
 
     }
 
@@ -339,7 +327,7 @@ public class StartActivity extends AppCompatActivity {
         Intent ReceiberIntent = new Intent(StartActivity.this, AlarmRecevier.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(StartActivity.this, 0, ReceiberIntent, 0);
 
-        String from = "003900AM";
+        String from = "080000AM";
         int dayofweek = 0;
         SimpleDateFormat dateFormat1 = new SimpleDateFormat();
         Date datetime = null;

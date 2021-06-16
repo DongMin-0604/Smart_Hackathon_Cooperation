@@ -1,5 +1,6 @@
 package com.example.separate_collection_app.category;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
-import com.example.separate_collection_app.Search;
 import com.example.separate_collection_app.Select_food.category_bone;
 import com.example.separate_collection_app.Select_food.category_corn;
 import com.example.separate_collection_app.Select_food.category_crab;
@@ -161,7 +161,8 @@ public class category_Food extends Fragment {
         back_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(Search.newInstance());
+                Intent intent_food =new Intent(getActivity(),MainActivity.class);
+                startActivity(intent_food);
 
             }
         });
