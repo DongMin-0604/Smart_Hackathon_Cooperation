@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
     TextView mon_TV,tue_TV,wed_TV,thu_TV,fri_TV,sat_TV,sun_TV,City_TV,Country_TV;
 
     Button setting_BT;
+
+    boolean check = false;
     //내 정보 화면 끝
     @Override
     public void onBackPressed() {
@@ -157,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
         Home_LO.setVisibility(View.VISIBLE);
 
         TV_Date.setText("오늘은 "+getTime()+"입니다.");
+
 
         //홈 화면
         Intent intent1 = getIntent();
@@ -282,7 +285,9 @@ public class MainActivity extends AppCompatActivity {
         setting_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                check = true;
                 Intent intent = new Intent(getApplicationContext(),StartActivity.class);
+                intent.putExtra("Check",check);
                 startActivity(intent);
             }
         });
@@ -384,16 +389,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//홈 화면 메소드
-    private String getTime(){
-        Time = System.currentTimeMillis();
-        mDate = new Date(Time);
-        return mFormat.format(mDate);
-    }
-//홈 화면 메소드 끝
     public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.main_frame,fragment).commit();
     }
+
+    //홈 화면 메소드
+    private String getTime(){
+        Time = System.currentTimeMillis();
+        mDate = new Date(Time);
+        return mFormat.format(mDate);
+    }
+    //홈 화면 메소드 끝
 }

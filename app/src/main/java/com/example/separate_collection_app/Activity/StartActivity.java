@@ -46,9 +46,12 @@ public class StartActivity extends AppCompatActivity {
 
     String  mon = null,sun = null,satur = null,fri = null,thurs = null,wednes = null,tues = null;
 
+    int day_ch;
    //푸시알림 코드 시작
     private AlarmManager alarmManager;
     private GregorianCalendar mCalendar;
+
+    PendingIntent pendingIntent;
 
     private  NotificationManager notificationManager;
     NotificationCompat.Builder builder;
@@ -195,6 +198,7 @@ public class StartActivity extends AppCompatActivity {
                      mon = null;
                     toggleBT1.setBackgroundResource(R.drawable.toggle_bt_background);
                     toggleBT1.setTextColor(Color.parseColor("#000000"));
+
                 }
             }
         });
@@ -294,10 +298,9 @@ public class StartActivity extends AppCompatActivity {
         GO_MAIN_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PushAlarmgive();
+
                 city_check = CityTV.getText().toString();
                 country_check = CountryTV.getText().toString();
-
                 if (city_check.equals("--시/도") || country_check.equals("--시/군/구") ){
                     String str = CityTV.getText().toString();
                     if (str.equals("세종특별자치시")){
@@ -314,10 +317,13 @@ public class StartActivity extends AppCompatActivity {
                         intent.putExtra("City",CityTV.getText().toString());
                         intent.putExtra("Country",CountryTV.getText().toString());
                         startActivity(intent);
+                        finish();
+                        PushAlarmgive();
                     }else {
                         Toast.makeText(getApplicationContext(),"잘못된 정보입니다.",Toast.LENGTH_SHORT).show();
                     }
                 }else{
+                    PushAlarmgive();
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     intent.putExtra("mon",mon);
                     intent.putExtra("tue",tues);
@@ -330,7 +336,7 @@ public class StartActivity extends AppCompatActivity {
                     intent.putExtra("City",CityTV.getText().toString());
                     intent.putExtra("Country",CountryTV.getText().toString());
                     startActivity(intent);
-
+                    finish();
                 }
             }
         });
@@ -341,9 +347,23 @@ public class StartActivity extends AppCompatActivity {
 
     private void pushAlarm() {
         Intent ReceiberIntent = new Intent(StartActivity.this, AlarmRecevier.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(StartActivity.this, 0, ReceiberIntent, 0);
+        pendingIntent = PendingIntent.getBroadcast(StartActivity.this, 0, ReceiberIntent, 0);
 
-        String from = "080000AM";
+        Intent intent3 = new Intent(this,AlarmRecevier.class);
+        PendingIntent sender = PendingIntent.getBroadcast(this,0,intent3,PendingIntent.FLAG_NO_CREATE);
+
+        Intent intent4 = getIntent();
+        boolean boo = intent4.getBooleanExtra("Check",false);
+        if (boo == true){
+            alarmManager.cancel(sender);
+            sender.cancel();
+            Log.v("1","캔슬되었습니다.");
+            boo = false;
+        }
+
+        Calendar calendar2 = Calendar.getInstance();
+//      int mDayOfWeek = calendar2.get(Calendar.DAY_OF_WEEK);
+        String from = "080000";
         int dayofweek = 0;
         SimpleDateFormat dateFormat1 = new SimpleDateFormat();
         Date datetime = null;
@@ -354,6 +374,7 @@ public class StartActivity extends AppCompatActivity {
         }
 
         Calendar calendar1 = Calendar.getInstance();
+        calendar1.set(Calendar.DAY_OF_WEEK,day_ch);
         calendar1.set(Calendar.HOUR,Integer.parseInt(from.substring(0,2)));
         calendar1.set(Calendar.MINUTE,Integer.parseInt(from.substring(2,4)));
         calendar1.set(Calendar.SECOND,Integer.parseInt(from.substring(4,6)));
@@ -361,54 +382,49 @@ public class StartActivity extends AppCompatActivity {
         if (calendar1.getTimeInMillis() < System.currentTimeMillis()){
             calendar1.add(Calendar.DAY_OF_YEAR,7);
         }
+
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar1.getTimeInMillis(),AlarmManager.INTERVAL_DAY*7,pendingIntent);
 
 
     }
     public void PushAlarmgive() {
 
-        Calendar calendar2 = Calendar.getInstance();
-        int mDayOfWeek = calendar2.get(Calendar.DAY_OF_WEEK);
-
+//        Calendar calendar2 = Calendar.getInstance();
+//        int mDayOfWeek = calendar2.get(Calendar.DAY_OF_WEEK);
         if (!TextUtils.isEmpty(sun)) {
-            if (mDayOfWeek == 1) {
+                day_ch = 1;
                 pushAlarm();
-            }
         }
         if (!TextUtils.isEmpty(mon)) {
-            if (mDayOfWeek == 2) {
+                day_ch = 2;
                 pushAlarm();
 
-            }
         }
         if (!TextUtils.isEmpty(tues)) {
-            if (mDayOfWeek == 3) {
+                day_ch = 3;
                 pushAlarm();
-            }
 
         }
         if (!TextUtils.isEmpty(wednes)) {
-            if (mDayOfWeek == 4) {
+                day_ch = 4;
                 pushAlarm();
-            }
-
         }
         if (!TextUtils.isEmpty(thurs)) {
-            if (mDayOfWeek == 5) {
+                day_ch = 5;
                 pushAlarm();
-            }
+
 
         }
         if (!TextUtils.isEmpty(fri)) {
-            if (mDayOfWeek == 6) {
+                day_ch = 6;
                 pushAlarm();
-            }
+
 
         }
         if (!TextUtils.isEmpty(satur)) {
-            if (mDayOfWeek == 7) {
+                day_ch = 7;
                 pushAlarm();
-            }
+
         }
     }
 

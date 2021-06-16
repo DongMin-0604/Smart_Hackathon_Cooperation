@@ -84,6 +84,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/wemakeprice_semibold"
                         android:textColor="@color/white"
+                        android:text="오류가 났습니다."
                         android:textSize="23dp"
                         app:layout_constraintBottom_toTopOf="@+id/calendar_view"
                         app:layout_constraintEnd_toEndOf="parent"

@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <!--   최초실행자에게만 보여지는 창 구현 완료했지만 코딩할때 편하도록 기능 비활성화     -->
-<!--        <activity android:name=".StartActivity" android:screenOrientation="portrait"></activity>-->
+<!--        <activity android:name=".Activity.StartActivity" android:screenOrientation="portrait"></activity>-->
         <activity android:name=".Activity.MainActivity" android:screenOrientation="portrait"></activity>
 
 
