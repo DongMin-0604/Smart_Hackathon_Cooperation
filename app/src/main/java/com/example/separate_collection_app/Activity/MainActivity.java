@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint({"ResourceAsColor", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -156,12 +156,9 @@ public class MainActivity extends AppCompatActivity {
 
         Home_LO.setVisibility(View.VISIBLE);
 
+        TV_Date.setText("오늘은 "+getTime()+"입니다.");
+
         //홈 화면
-
-
-        // Inflate the layout for this fragment
-        TV_Date.setText("오늘은 "+getTime()+" 입니다.");
-
         Intent intent1 = getIntent();
         City_TV.setText(intent1.getStringExtra("City"));
         Country_TV.setText(intent1.getStringExtra("Country"));
@@ -302,6 +299,7 @@ public class MainActivity extends AppCompatActivity {
                 Home_LO.setVisibility(View.VISIBLE);
                 Category_LO.setVisibility(View.INVISIBLE);
                 myinfo_LO.setVisibility(View.INVISIBLE);
+
             }
         });
         categor_home_BT.setOnClickListener(new View.OnClickListener() {
@@ -385,6 +383,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
 //홈 화면 메소드
     private String getTime(){
         Time = System.currentTimeMillis();
