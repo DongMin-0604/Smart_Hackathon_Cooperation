@@ -10,9 +10,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,8 +29,12 @@ import android.widget.Toast;
 import com.example.separate_collection_app.Decorator.FridayDecorator;
 import com.example.separate_collection_app.Decorator.MondayDecorator;
 import com.example.separate_collection_app.Decorator.OneDayDecorator;
+import com.example.separate_collection_app.Decorator.Sat_select_dayDecorator;
 import com.example.separate_collection_app.Decorator.SaturdayDecorator;
+import com.example.separate_collection_app.Decorator.Sun_select_dayDecorator;
 import com.example.separate_collection_app.Decorator.SundayDecorator;
+import com.example.separate_collection_app.Decorator.ThudayDecorator;
+import com.example.separate_collection_app.Decorator.TuesdayDecorator;
 import com.example.separate_collection_app.Decorator.weddayDecorator;
 import com.example.separate_collection_app.R;
 import com.example.separate_collection_app.category.category_Can;
@@ -72,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     //내 정보 화면
     TextView City_TV2,Country_TV2,Town_TV2;
     String City_st;
-    String temp1,temp2,temp3,temp4,temp5,temp6,temp7;
+    TextView mon_TV,tue_TV,wed_TV,thu_TV,fri_TV,sat_TV,sun_TV,City_TV,Country_TV;
 
     Button setting_BT;
     //내 정보 화면 끝
@@ -126,6 +135,25 @@ public class MainActivity extends AppCompatActivity {
         materialCalendarView = findViewById(R.id.calendar_view);
         TV_Date = (TextView)findViewById(R.id.Data_Display);
 
+        plastic_BT = (Button)findViewById(R.id.plastic_garbage);
+        Food_BT = (Button)findViewById(R.id.Food_waste);
+        can_BT = (Button)findViewById(R.id.cans_scrap_metal);
+        glass_BT = (Button)findViewById(R.id.glass_bottle_trash);
+        paper_BT = (Button)findViewById(R.id.paper_waste);
+        vinyl_BT = (Button)findViewById(R.id.vinyl_trash);
+        other_BT = (Button)findViewById(R.id.other_trash);
+
+        mon_TV = (TextView)findViewById(R.id.mon_TV);
+        tue_TV = (TextView)findViewById(R.id.tue_TV);
+        wed_TV = (TextView)findViewById(R.id.wed_TV);
+        thu_TV = (TextView)findViewById(R.id.thu_TV);
+        fri_TV = (TextView)findViewById(R.id.fri_TV);
+        sat_TV = (TextView)findViewById(R.id.sat_TV);
+        sun_TV = (TextView)findViewById(R.id.sun_TV);
+
+        City_TV = (TextView)findViewById(R.id.city_temp1);
+        Country_TV = (TextView)findViewById(R.id.country_temp1);
+
         Home_LO.setVisibility(View.VISIBLE);
 
         //홈 화면
@@ -134,27 +162,81 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the layout for this fragment
         TV_Date.setText("오늘은 "+getTime()+" 입니다.");
 
+        Intent intent1 = getIntent();
+        City_TV.setText(intent1.getStringExtra("City"));
+        Country_TV.setText(intent1.getStringExtra("Country"));
 
-        materialCalendarView.addDecorator(new MondayDecorator(this));
+        if (!TextUtils.isEmpty(intent1.getStringExtra("mon"))){
+            materialCalendarView.addDecorator(new MondayDecorator(this));
+
+            Spannable spannable = (Spannable)mon_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+        if (!TextUtils.isEmpty(intent1.getStringExtra("tue"))){
+            materialCalendarView.addDecorator(new TuesdayDecorator(this));
+
+            Spannable spannable = (Spannable)tue_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+        if (!TextUtils.isEmpty(intent1.getStringExtra("wed"))){
+            materialCalendarView.addDecorator(new weddayDecorator(this));
+
+            Spannable spannable = (Spannable)wed_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+        if (!TextUtils.isEmpty(intent1.getStringExtra("thu"))){
+            materialCalendarView.addDecorator(new ThudayDecorator(this));
+
+            Spannable spannable = (Spannable)thu_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+        if (!TextUtils.isEmpty(intent1.getStringExtra("fri"))){
+            materialCalendarView.addDecorator(new FridayDecorator(this));
+
+            Spannable spannable = (Spannable)fri_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+        if (!TextUtils.isEmpty(intent1.getStringExtra("satur"))){
+            materialCalendarView.addDecorator(new Sat_select_dayDecorator(this));
+
+            Spannable spannable = (Spannable)sat_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+        if (!TextUtils.isEmpty(intent1.getStringExtra("sun"))){
+            materialCalendarView.addDecorator(new Sun_select_dayDecorator(this));
+
+            Spannable spannable = (Spannable)sun_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }else {
+
+        }
+
         materialCalendarView.addDecorator(new SundayDecorator());
         materialCalendarView.addDecorator(new SaturdayDecorator());
         materialCalendarView.addDecorator(new OneDayDecorator());
-//        materialCalendarView.addDecorator(new TuesdayDecorator(this));
-        materialCalendarView.addDecorator(new weddayDecorator(this));
-//        materialCalendarView.addDecorator(new ThudayDecorator(this));
-        materialCalendarView.addDecorator(new FridayDecorator(this));
-//        materialCalendarView.addDecorator(new Sat_select_dayDecorator(this));
-//        materialCalendarView.addDecorator(new Sun_select_dayDecorator(this));
         //홈 화면 끝
 
         //카테고리 화면
-        plastic_BT = (Button)findViewById(R.id.plastic_garbage);
-        Food_BT = (Button)findViewById(R.id.Food_waste);
-        can_BT = (Button)findViewById(R.id.cans_scrap_metal);
-        glass_BT = (Button)findViewById(R.id.glass_bottle_trash);
-        paper_BT = (Button)findViewById(R.id.paper_waste);
-        vinyl_BT = (Button)findViewById(R.id.vinyl_trash);
-        other_BT = (Button)findViewById(R.id.other_trash);
+
         plastic_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

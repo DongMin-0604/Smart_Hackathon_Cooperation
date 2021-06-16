@@ -10,7 +10,6 @@
         android:id="@+id/Scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="63dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

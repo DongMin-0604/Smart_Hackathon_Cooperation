@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
@@ -32,9 +33,9 @@ public class category_Vinyl extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent intent_vinyl =new Intent(getActivity(),MainActivity.class);
-                startActivity(intent_vinyl);
-
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction().remove(category_Vinyl.this).commit();
+                fragmentManager.popBackStack();
             }
         });
 

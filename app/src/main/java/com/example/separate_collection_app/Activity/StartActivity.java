@@ -301,18 +301,34 @@ public class StartActivity extends AppCompatActivity {
                 if (city_check.equals("--시/도") || country_check.equals("--시/군/구") ){
                     String str = CityTV.getText().toString();
                     if (str.equals("세종특별자치시")){
-
-//                        bundle.putString("str1",CityTV.getText().toString());
-//                        MyInfo myInfo = new MyInfo();
-//                        myInfo.setArguments(bundle);
+                        CountryTV.setText("---");
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
+                        intent.putExtra("mon",mon);
+                        intent.putExtra("tue",tues);
+                        intent.putExtra("wed",wednes);
+                        intent.putExtra("thu",thurs);
+                        intent.putExtra("fri",fri);
+                        intent.putExtra("satur",satur);
+                        intent.putExtra("sun",sun);
 
+                        intent.putExtra("City",CityTV.getText().toString());
+                        intent.putExtra("Country",CountryTV.getText().toString());
+                        startActivity(intent);
                     }else {
                         Toast.makeText(getApplicationContext(),"잘못된 정보입니다.",Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    intent.putExtra("mon",mon);
+                    intent.putExtra("tue",tues);
+                    intent.putExtra("wed",wednes);
+                    intent.putExtra("thu",thurs);
+                    intent.putExtra("fri",fri);
+                    intent.putExtra("satur",satur);
+                    intent.putExtra("sun",sun);
+
+                    intent.putExtra("City",CityTV.getText().toString());
+                    intent.putExtra("Country",CountryTV.getText().toString());
                     startActivity(intent);
 
                 }

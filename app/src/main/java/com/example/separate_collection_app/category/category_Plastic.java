@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
@@ -34,8 +35,9 @@ public class category_Plastic extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent intent_plastic =new Intent(getActivity(),MainActivity.class);
-                startActivity(intent_plastic);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction().remove(category_Plastic.this).commit();
+                fragmentManager.popBackStack();
 
             }
         });

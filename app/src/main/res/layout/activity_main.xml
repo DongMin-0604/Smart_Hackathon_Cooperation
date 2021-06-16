@@ -7,18 +7,6 @@
     android:background="@color/back_color"
     tools:context=".Activity.MainActivity">
 
-
-    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-    <!--        android:id="@+id/bottomNavi"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:background="#fff"-->
-    <!--        app:itemIconTint="@drawable/menu_select_color"-->
-    <!--        app:itemTextColor="@drawable/menu_select_color"-->
-    <!--        app:menu="@menu/bottom_nv"-->
-    <!--         />-->
             <FrameLayout
                 android:id="@+id/main_frame"
                 android:layout_width="match_parent"
@@ -79,11 +67,10 @@
                             android:textAllCaps="false"
                             android:textColor="#958F8F" />
                     </LinearLayout>
-
-                                        <ImageView
+                    <ImageView
                         android:id="@+id/logo"
                         android:layout_width="match_parent"
-                        android:layout_height="500px"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:src="@drawable/logo5"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -401,23 +388,25 @@
                             android:id="@+id/linearLayout"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="200dp"
+                            android:layout_marginTop="170dp"
                             android:gravity="center"
                             android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/textView4"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0">
 
                             <TextView
                                 android:id="@+id/city_temp1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="60dp"
-                                android:width="250px"
-                                android:gravity="center"
+                                android:gravity="center_vertical|end"
                                 android:text="--시"
+                                android:fontFamily="@font/wemakeprice_regular"
                                 android:textColor="@color/white"
-                                android:textSize="44px"
+                                android:textSize="20dp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -426,40 +415,22 @@
                                 android:layout_height="60dp"
                                 android:gravity="center"
                                 android:text="/"
+                                android:fontFamily="@font/wemakeprice_regular"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
                                 android:textColor="@color/white"
-                                android:textSize="40px" />
+                                android:textSize="20dp" />
 
                             <TextView
                                 android:id="@+id/country_temp1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="60dp"
-                                android:width="250px"
-                                android:gravity="center"
-                                android:text="--구"
+                                android:gravity="center_vertical"
+                                android:text="--군/구"
+                                android:fontFamily="@font/wemakeprice_regular"
                                 android:textColor="@color/white"
-                                android:textSize="44px"
+                                android:textSize="20dp"
                                 android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/textView3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="60dp"
-                                android:gravity="center"
-                                android:text="/"
-                                android:textColor="@color/white"
-                                android:textSize="40px" />
-
-                            <TextView
-                                android:id="@+id/town_temp1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="60dp"
-                                android:width="250px"
-                                android:gravity="center"
-                                android:text="--동"
-                                android:textColor="@color/white"
-                                android:textSize="44px"
-                                android:textStyle="bold" />
-
                         </LinearLayout>
 
                         <TextView
@@ -470,12 +441,167 @@
                             android:gravity="center"
                             android:text="당신의 분리수거 요일은"
                             android:textColor="#000000"
-                            android:textSize="50px"
+                            android:textSize="20dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.501" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.708">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="월"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/mon_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.124"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.686" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="화"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/tue_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.218"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.688" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="수"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/wed_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.31"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.686" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="목"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/thu_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.124"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.75" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="금"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/fri_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.31"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.731" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="토"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/sat_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.31"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.836" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:bufferType="spannable"
+                                android:text="일"
+                                android:fontFamily="@font/imcresoojin"
+                                android:textColor="#918B8B"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/sun_TV"
+                                app:layout_constraintBottom_toTopOf="@+id/myinfo_setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.783"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.795" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/imcresoojin"
+                            android:gravity="center"
+                            android:text="입니다."
+                            android:textColor="#000000"
+                            android:textSize="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.666" />
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/myinfo_setting"
