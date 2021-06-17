@@ -38,15 +38,14 @@ public class category_paint extends Fragment {
         textView2 = (TextView)v.findViewById(R.id.warning_tv2);
 
         Spannable spannable = (Spannable)textView.getText();
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),45,59,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new StyleSpan(Typeface.BOLD),45,59,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),10,17,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),37,43,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),51,58,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),67,71,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),78,92,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),120,139,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         Spannable spannable1 = (Spannable)textView2.getText();
-        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,6,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),7,29,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-//        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),11,13,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-//        spannable1.setSpan(new StyleSpan(Typeface.BOLD),7,9,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-//        spannable1.setSpan(new StyleSpan(Typeface.BOLD),11,13,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,58,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         back_BT.setOnClickListener(new View.OnClickListener() {
 

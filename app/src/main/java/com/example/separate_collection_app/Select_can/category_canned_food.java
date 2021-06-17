@@ -40,7 +40,7 @@ public class category_canned_food extends Fragment {
 
         Spannable spannable = (Spannable)textView.getText();
         spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),0,3,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),41,43,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),40,43,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),43,47,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         Spannable spannable1 = (Spannable)textView2.getText();

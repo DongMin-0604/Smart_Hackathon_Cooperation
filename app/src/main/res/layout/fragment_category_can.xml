@@ -151,7 +151,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="우산살"
+                    android:text="우산"
                     android:id="@+id/umbrella_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"

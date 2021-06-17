@@ -72,12 +72,12 @@
 
             <TextView
                 android:id="@+id/info_tv"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="60dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5px"
                 android:bufferType="spannable"
-                android:text="내용물이 있는 캔인 경우 내용물을 비우고\n물로 깨끗이 헹궈 배출해야 하며\n라벨,스티커 등이 붙어있는 경우 깨끗하게 떼어낸 후 버려야합니다."
+                android:text="내용물이 남아있을 경우 내용물을 비우고\n물로 깨끗이 헹궈 배출해야 하며\n라벨,스티커 등이 붙어있는 경우 깨끗하게 떼어낸 후 버려야합니다."
                 android:fontFamily="@font/wemakeprice_semibold"
                 android:textColor="@color/black"
                 android:textAlignment="viewStart"
