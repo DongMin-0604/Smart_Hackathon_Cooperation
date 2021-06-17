@@ -385,6 +385,22 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.17" />
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/imcresoojin"
+                            android:gravity="center"
+                            android:text="지역"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
+
                         <LinearLayout
                             android:id="@+id/linearLayout"
                             android:layout_width="0dp"
@@ -397,15 +413,15 @@
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0">
+                            app:layout_constraintVertical_bias="0.188">
 
                             <TextView
                                 android:id="@+id/city_temp1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="60dp"
+                                android:fontFamily="@font/wemakeprice_regular"
                                 android:gravity="center_vertical|end"
                                 android:text="--시"
-                                android:fontFamily="@font/wemakeprice_regular"
                                 android:textColor="@color/white"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
@@ -414,11 +430,11 @@
                                 android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="60dp"
-                                android:gravity="center"
-                                android:text="/"
-                                android:fontFamily="@font/wemakeprice_regular"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginRight="10dp"
+                                android:fontFamily="@font/wemakeprice_regular"
+                                android:gravity="center"
+                                android:text="/"
                                 android:textColor="@color/white"
                                 android:textSize="20dp" />
 
@@ -426,9 +442,9 @@
                                 android:id="@+id/country_temp1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="60dp"
+                                android:fontFamily="@font/wemakeprice_regular"
                                 android:gravity="center_vertical"
                                 android:text="--군/구"
-                                android:fontFamily="@font/wemakeprice_regular"
                                 android:textColor="@color/white"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
