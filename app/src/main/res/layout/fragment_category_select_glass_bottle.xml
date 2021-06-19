@@ -72,24 +72,24 @@
 
             <TextView
                 android:id="@+id/info_tv"
-                android:layout_marginTop="60dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
                 android:bufferType="spannable"
-                android:padding="5px"
-                android:text="캔류를 배출할때는 납작하게 부피를 줄여 배출하는 것을 권장하며 라벨,스티커 등이 붙어있는 경우 깨끗하게 떼어낸 후 버려야합니다."
                 android:fontFamily="@font/wemakeprice_semibold"
-                android:textColor="@color/black"
+                android:padding="5px"
+                android:text="유리병은 재활용이 가능한 물품입니다.내용물과 이물질(담배꽁초 등)을 비우고 세척하여 유리쓰레기에 버리면 됩니다."
                 android:textAlignment="viewStart"
-                android:textSize="56px"
-                />
+                android:textColor="@color/black"
+                android:textSize="56px" />
+
             <TextView
                 android:id="@+id/warning_tv2"
                 android:layout_marginTop="210dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:bufferType="spannable"
-                android:text="※주의사항※\n캔류의 수거 장소가 종류의 따라 나눠져 있으면\n캔류(알미늄),캔류(철)로 분리배출해야합니다."
+                android:text="※주의사항※\n유리병의 뚜껑은 재질에따라 분리수거 하고 깨진 유리병은 재활용이 불가능해 일반쓰레기로 배출해야 합니다."
                 android:fontFamily="@font/wemakeprice_semibold"
                 android:textColor="@color/black"
                 android:textAlignment="center"

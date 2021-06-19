@@ -36,12 +36,12 @@ public class category_glass_bottle extends Fragment {
         textView2 = (TextView)v.findViewById(R.id.warning_tv2);
 
         Spannable spannable = (Spannable)textView.getText();
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),15,22,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),34,42,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),5,13,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),46,52,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
 
         Spannable spannable1 = (Spannable)textView2.getText();
-        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,58,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,64,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         back_BT.setOnClickListener(new View.OnClickListener() {
 

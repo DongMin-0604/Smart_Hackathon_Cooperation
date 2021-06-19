@@ -36,12 +36,12 @@ public class category_coffee_pot extends Fragment {
         textView2 = (TextView)v.findViewById(R.id.warning_tv2);
 
         Spannable spannable = (Spannable)textView.getText();
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),15,22,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),34,42,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),22,26,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),33,50,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
 
         Spannable spannable1 = (Spannable)textView2.getText();
-        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,58,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,80,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         back_BT.setOnClickListener(new View.OnClickListener() {
 

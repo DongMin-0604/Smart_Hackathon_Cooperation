@@ -26,6 +26,7 @@ public class category_wire_cloth extends Fragment {
     public static category_wire_cloth newInstance(){
         return new category_wire_cloth();
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
