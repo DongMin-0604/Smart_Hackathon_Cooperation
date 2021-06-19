@@ -37,14 +37,12 @@ public class category_salted_fish extends Fragment {
         textView2 = (TextView)v.findViewById(R.id.warning_tv2);
 
         Spannable spannable = (Spannable)textView.getText();
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),4,9,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),11,17,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),24,31,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),33,35,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),55,62,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),4,15,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),18,21,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),23,30,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         Spannable spannable1 = (Spannable)textView2.getText();
-        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,54,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,34,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         back_BT.setOnClickListener(new View.OnClickListener() {
 
