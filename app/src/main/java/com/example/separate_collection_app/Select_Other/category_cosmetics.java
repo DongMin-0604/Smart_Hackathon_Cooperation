@@ -17,21 +17,20 @@ import androidx.fragment.app.Fragment;
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
 import com.example.separate_collection_app.category.category_Other;
-import com.example.separate_collection_app.category.category_Plastic;
 
-public class category_wire_cloth extends Fragment {
+public class category_cosmetics extends Fragment {
 
     Button back_BT;
     TextView textView, textView2;
 
-    public static category_wire_cloth newInstance(){
-        return new category_wire_cloth();
+    public static category_cosmetics newInstance(){
+        return new category_cosmetics();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_category_select_wire_cloth, null);
+        View v = inflater.inflate(R.layout.fragment_category_select_cosmetics, null);
 
         back_BT = (Button)v.findViewById(R.id.bt_back);
         textView = (TextView)v.findViewById(R.id.info_tv);
