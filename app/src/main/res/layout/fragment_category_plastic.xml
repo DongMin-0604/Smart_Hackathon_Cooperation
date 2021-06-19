@@ -152,16 +152,6 @@
                 android:gravity="center"
                 android:layout_marginTop="15dp">
                 <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="비커"
-                    android:id="@+id/beaker_bt"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/straw_bt"
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
@@ -169,6 +159,7 @@
                     android:text="빨대"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
+                    android:layout_marginRight="190dp"
                     />
             </LinearLayout>
             <TextView
@@ -229,17 +220,9 @@
                     android:id="@+id/small_plastic_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="190dp"
                     />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="전선피복"
-                    android:id="@+id/wire_cloth_bt"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -322,7 +305,7 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="필라맨트"
+                    android:text="필라멘트"
                     android:id="@+id/filament_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"

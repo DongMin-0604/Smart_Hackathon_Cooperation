@@ -1,6 +1,5 @@
 package com.example.separate_collection_app.category;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.separate_collection_app.Activity.MainActivity;
 import com.example.separate_collection_app.R;
-import com.example.separate_collection_app.Select_plastic.category_beaker;
 import com.example.separate_collection_app.Select_plastic.category_bio_plastic;
 import com.example.separate_collection_app.Select_plastic.category_cassette_tape;
 import com.example.separate_collection_app.Select_plastic.category_disposable_container;
@@ -29,13 +27,12 @@ import com.example.separate_collection_app.Select_plastic.category_strainer;
 import com.example.separate_collection_app.Select_plastic.category_straw;
 import com.example.separate_collection_app.Select_plastic.category_toothbrush;
 import com.example.separate_collection_app.Select_plastic.category_toy;
-import com.example.separate_collection_app.Select_plastic.category_wire_cloth;
 
 public class category_Plastic extends Fragment {
 
     Button back_BT;
-    Button straw_BT,strainer_BT,fishing_line_BT,lunch_box_BT,bio_plastic_BT,protect_glass_BT,beaker_BT,shampoo_BT,disposable_container_BT;
-    Button small_plastic_BT,wire_cloth_BT,toy_BT,toothbrush_BT,cassette_tape_BT,plastic_bottle_BT,filament_BT;
+    Button straw_BT,strainer_BT,fishing_line_BT,lunch_box_BT,bio_plastic_BT,protect_glass_BT,shampoo_BT,disposable_container_BT;
+    Button small_plastic_BT,toy_BT,toothbrush_BT,cassette_tape_BT,plastic_bottle_BT,filament_BT;
 
     public static category_Plastic newInstance(){
         return new category_Plastic();
@@ -51,11 +48,9 @@ public class category_Plastic extends Fragment {
         lunch_box_BT = (Button)v.findViewById(R.id.lunch_box_bt);
         bio_plastic_BT = (Button)v.findViewById(R.id.bio_plastic_bt);
         protect_glass_BT = (Button)v.findViewById(R.id.protect_glasses_bt);
-        beaker_BT = (Button)v.findViewById(R.id.beaker_bt);
         shampoo_BT = (Button)v.findViewById(R.id.shampoo_container_bt);
         disposable_container_BT = (Button)v.findViewById(R.id.disposable_container_bt);
         small_plastic_BT = (Button)v.findViewById(R.id.small_plastic_bt);
-        wire_cloth_BT = (Button)v.findViewById(R.id.wire_cloth_bt);
         toy_BT = (Button)v.findViewById(R.id.toy_bt);
         toothbrush_BT = (Button)v.findViewById(R.id.toothbrush_bt);
         cassette_tape_BT = (Button)v.findViewById(R.id.cassette_tape_bt);
@@ -110,12 +105,6 @@ public class category_Plastic extends Fragment {
                 ((MainActivity)getActivity()).replaceFragment(category_protect_glass.newInstance());
             }
         });
-        beaker_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_beaker.newInstance());
-            }
-        });
         shampoo_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,12 +121,6 @@ public class category_Plastic extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainActivity)getActivity()).replaceFragment(category_small_plastic.newInstance());
-            }
-        });
-        wire_cloth_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_wire_cloth.newInstance());
             }
         });
         toy_BT.setOnClickListener(new View.OnClickListener() {
