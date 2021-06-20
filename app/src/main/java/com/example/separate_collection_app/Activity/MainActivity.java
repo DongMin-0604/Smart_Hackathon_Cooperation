@@ -1,12 +1,14 @@
 package com.example.separate_collection_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd");
     MaterialCalendarView materialCalendarView;
 
-    String mon_temp,tue_temp,wed_temp,thu_temp,fri_temp,sat_temp,sunString;
+    String mon_temp,tue_temp,wed_temp,thu_temp,fri_temp,sat_temp,sun_temp;
 
     //홈 화면 선언 끝
 
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     //내 정보 화면
     TextView City_TV2,Country_TV2,Town_TV2;
-    String City_st;
+    String mon1,tue1,wed1,thu1,fri1,sat1,sun1;
     TextView mon_TV,tue_TV,wed_TV,thu_TV,fri_TV,sat_TV,sun_TV,City_TV,Country_TV;
 
     Button setting_BT;
@@ -97,16 +99,16 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
             return;
         }
-
         if (System.currentTimeMillis() <= backkeyPressedTime+2000){
-            moveTaskToBack(true);						// 태스크를 백그라운드로 이동
-            finishAndRemoveTask();						// 액티비티 종료 + 태스크 리스트에서 지우기
-            android.os.Process.killProcess(android.os.Process.myPid());
+            onDestroy();
+            ActivityCompat.finishAffinity(this);
+            System.exit(0);
+//            moveTaskToBack(true);						// 태스크를 백그라운드로 이동
+//            finish();
+//            android.os.Process.killProcess(android.os.Process.myPid());
             toast.cancel();
         }
-
     }
-
     @SuppressLint({"ResourceAsColor", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,30 +162,91 @@ public class MainActivity extends AppCompatActivity {
 
         TV_Date.setText("오늘은 "+getTime()+"입니다.");
 
+        SharedPreferences pref = getSharedPreferences("IsFirst", Activity.MODE_PRIVATE);
+        boolean first = pref.getBoolean("isFirst",false);
+        if (first == false){
+            Log.d("Is first Time?","first");
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("isFirst",true);
+            editor.commit();
+
+            Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+            startActivity(intent);
+        }else{
+            Log.d("Is first Time?","not first");
+
+        }
+
 
         //홈 화면
         Intent intent1 = getIntent();
         City_TV.setText(intent1.getStringExtra("City"));
         Country_TV.setText(intent1.getStringExtra("Country"));
 
+
+           mon_temp = intent1.getStringExtra("mon");
+           tue_temp = intent1.getStringExtra("tue");
+           wed_temp = intent1.getStringExtra("wed");
+           thu_temp = intent1.getStringExtra("thu");
+           fri_temp = intent1.getStringExtra("fri");
+           sat_temp = intent1.getStringExtra("sat");
+           sun_temp = intent1.getStringExtra("sun");
+
+
+        Log.v("mon2","확인:"+mon_temp);
+        SharedPreferences sharedPreferences = getSharedPreferences("test",Activity.MODE_PRIVATE);
+        mon1 = sharedPreferences.getString("mon","");
+        tue1  = sharedPreferences.getString("tue","");
+        wed1 = sharedPreferences.getString("wed","");
+        thu1 = sharedPreferences.getString("thu","");
+        fri1 = sharedPreferences.getString("fri","");
+        sat1 = sharedPreferences.getString("sat","");
+        sun1 = sharedPreferences.getString("sun","");
+
+        Log.v("mon","확인:"+mon1);
         if (!TextUtils.isEmpty(intent1.getStringExtra("mon"))){
+
             materialCalendarView.addDecorator(new MondayDecorator(this));
 
             Spannable spannable = (Spannable)mon_TV.getText();
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        }else {
 
+        }else {
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("mon");
+            editor.commit();
         }
+        if (!TextUtils.isEmpty(mon1)){
+            materialCalendarView.addDecorator(new MondayDecorator(this));
+
+            Spannable spannable = (Spannable)mon_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
         if (!TextUtils.isEmpty(intent1.getStringExtra("tue"))){
             materialCalendarView.addDecorator(new TuesdayDecorator(this));
 
             Spannable spannable = (Spannable)tue_TV.getText();
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        }else {
 
+        }else {
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("tue");
+            editor.commit();
         }
+        if (!TextUtils.isEmpty(tue1)){
+            materialCalendarView.addDecorator(new TuesdayDecorator(this));
+
+            Spannable spannable = (Spannable)tue_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
         if (!TextUtils.isEmpty(intent1.getStringExtra("wed"))){
             materialCalendarView.addDecorator(new weddayDecorator(this));
 
@@ -191,8 +254,19 @@ public class MainActivity extends AppCompatActivity {
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }else {
-
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("wed");
+            editor.commit();
         }
+        if (!TextUtils.isEmpty(wed1)){
+            materialCalendarView.addDecorator(new weddayDecorator(this));
+
+            Spannable spannable = (Spannable)wed_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
         if (!TextUtils.isEmpty(intent1.getStringExtra("thu"))){
             materialCalendarView.addDecorator(new ThudayDecorator(this));
 
@@ -200,8 +274,19 @@ public class MainActivity extends AppCompatActivity {
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }else {
-
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("thu");
+            editor.commit();
         }
+        if (!TextUtils.isEmpty(thu1)){
+            materialCalendarView.addDecorator(new ThudayDecorator(this));
+
+            Spannable spannable = (Spannable)thu_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
         if (!TextUtils.isEmpty(intent1.getStringExtra("fri"))){
             materialCalendarView.addDecorator(new FridayDecorator(this));
 
@@ -209,17 +294,39 @@ public class MainActivity extends AppCompatActivity {
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }else {
-
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("fri");
+            editor.commit();
         }
-        if (!TextUtils.isEmpty(intent1.getStringExtra("satur"))){
+        if (!TextUtils.isEmpty(fri1)){
+            materialCalendarView.addDecorator(new FridayDecorator(this));
+
+            Spannable spannable = (Spannable)fri_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
+        if (!TextUtils.isEmpty(intent1.getStringExtra("sat"))){
             materialCalendarView.addDecorator(new Sat_select_dayDecorator(this));
 
             Spannable spannable = (Spannable)sat_TV.getText();
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }else {
-
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("sat");
+            editor.commit();
         }
+        if (!TextUtils.isEmpty(sat1)){
+            materialCalendarView.addDecorator(new Sat_select_dayDecorator(this));
+
+            Spannable spannable = (Spannable)sat_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
         if (!TextUtils.isEmpty(intent1.getStringExtra("sun"))){
             materialCalendarView.addDecorator(new Sun_select_dayDecorator(this));
 
@@ -227,8 +334,19 @@ public class MainActivity extends AppCompatActivity {
             spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }else {
-
+            SharedPreferences sharedPreferences1 = getSharedPreferences("test",Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences1.edit();
+            editor.remove("sun");
+            editor.commit();
         }
+        if (!TextUtils.isEmpty(sun1)){
+            materialCalendarView.addDecorator(new Sun_select_dayDecorator(this));
+
+            Spannable spannable = (Spannable)sun_TV.getText();
+            spannable.setSpan(new ForegroundColorSpan(Color.rgb(22,133,35)),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannable.setSpan(new RelativeSizeSpan(1.3f),0,1,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
 
         materialCalendarView.addDecorator(new SundayDecorator());
         materialCalendarView.addDecorator(new SaturdayDecorator());
@@ -373,20 +491,7 @@ public class MainActivity extends AppCompatActivity {
                 myinfo_LO.setVisibility(View.VISIBLE);
             }
         });
-        SharedPreferences pref = getSharedPreferences("IsFirst", Activity.MODE_PRIVATE);
-        boolean first = pref.getBoolean("isFirst",false);
-        if (first == false){
-            Log.d("Is first Time?","first");
-            SharedPreferences.Editor editor = pref.edit();
-            editor.putBoolean("isFirst",true);
-            editor.commit();
 
-            Intent intent = new Intent(getApplicationContext(), StartActivity.class);
-            startActivity(intent);
-        }else{
-            Log.d("Is first Time?","not first");
-
-        }
     }
 
     public void replaceFragment(Fragment fragment){
@@ -402,4 +507,21 @@ public class MainActivity extends AppCompatActivity {
         return mFormat.format(mDate);
     }
     //홈 화면 메소드 끝
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.v("mon3","종료");
+        SharedPreferences sharedPreferences = getSharedPreferences("test",Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("mon",mon_temp);
+        editor.putString("tue",tue_temp);
+        editor.putString("wed",wed_temp);
+        editor.putString("thu",thu_temp);
+        editor.putString("fri",fri_temp);
+        editor.putString("sat",sat_temp);
+        editor.putString("sun",sun_temp);
+        editor.commit();
+    }
 }

@@ -32,6 +32,7 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@drawable/ic_baseline_circle_notifications_24"/>
         <service android:name=".Activity.StartActivity" />
+
     </application>
 
 

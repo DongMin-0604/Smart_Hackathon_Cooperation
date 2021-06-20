@@ -44,7 +44,7 @@ public class StartActivity extends AppCompatActivity {
 
     ToggleButton toggleBT1,toggleBT2,toggleBT3,toggleBT4,toggleBT5,toggleBT6,toggleBT7;
 
-    String  mon = null,sun = null,satur = null,fri = null,thurs = null,wednes = null,tues = null;
+    String  mon = null,sun = null,sat = null,fri = null,thurs = null,wednes = null,tues = null;
 
     int day_ch;
    //푸시알림 코드 시작
@@ -62,7 +62,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.start);
         mon = null;
         sun = null;
-        satur = null;
+        sat = null;
         fri = null;
         thurs = null;
         wednes = null;
@@ -266,12 +266,12 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
-                    satur = "토요일";
-                    Toast.makeText(getApplicationContext(),satur,Toast.LENGTH_SHORT).show();
+                    sat = "토요일";
+                    Toast.makeText(getApplicationContext(),sat,Toast.LENGTH_SHORT).show();
                     toggleBT6.setBackgroundResource(R.drawable.toggle_bt_background2);
                     toggleBT6.setTextColor(Color.parseColor("#ffffff"));
                 }else {
-                    satur = null;
+                    sat = null;
                     toggleBT6.setBackgroundResource(R.drawable.toggle_bt_background);
                     toggleBT6.setTextColor(Color.parseColor("#000000"));
                 }
@@ -311,7 +311,7 @@ public class StartActivity extends AppCompatActivity {
                         intent.putExtra("wed",wednes);
                         intent.putExtra("thu",thurs);
                         intent.putExtra("fri",fri);
-                        intent.putExtra("satur",satur);
+                        intent.putExtra("satur",sat);
                         intent.putExtra("sun",sun);
 
                         intent.putExtra("City",CityTV.getText().toString());
@@ -330,7 +330,7 @@ public class StartActivity extends AppCompatActivity {
                     intent.putExtra("wed",wednes);
                     intent.putExtra("thu",thurs);
                     intent.putExtra("fri",fri);
-                    intent.putExtra("satur",satur);
+                    intent.putExtra("sat",sat);
                     intent.putExtra("sun",sun);
 
                     intent.putExtra("City",CityTV.getText().toString());
@@ -351,15 +351,6 @@ public class StartActivity extends AppCompatActivity {
 
         Intent intent3 = new Intent(this,AlarmRecevier.class);
         PendingIntent sender = PendingIntent.getBroadcast(this,0,intent3,PendingIntent.FLAG_NO_CREATE);
-
-        Intent intent4 = getIntent();
-        boolean boo = intent4.getBooleanExtra("Check",false);
-        if (boo == true){
-            alarmManager.cancel(sender);
-            sender.cancel();
-            Log.v("1","캔슬되었습니다.");
-            boo = false;
-        }
 
         Calendar calendar2 = Calendar.getInstance();
 //      int mDayOfWeek = calendar2.get(Calendar.DAY_OF_WEEK);
@@ -421,7 +412,7 @@ public class StartActivity extends AppCompatActivity {
 
 
         }
-        if (!TextUtils.isEmpty(satur)) {
+        if (!TextUtils.isEmpty(sat)) {
                 day_ch = 7;
                 pushAlarm();
 
