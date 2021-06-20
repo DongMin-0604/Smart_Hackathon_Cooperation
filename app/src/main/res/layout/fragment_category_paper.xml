@@ -69,7 +69,8 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="과자박스"
+                    android:id="@+id/snack_box_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -78,20 +79,12 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="나무젓가락"
+                    android:id="@+id/wood_chopsticks_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
             </LinearLayout>
-            <TextView
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="- ㉢~㉣ "
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/imcresoojin"
-                android:textColor="@color/black"
-                android:textAlignment="textStart"
-                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -102,52 +95,11 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="노트"
+                    android:id="@+id/note_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    />
-            </LinearLayout>
-            <TextView
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="- ㉤~㉥ "
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/imcresoojin"
-                android:textColor="@color/black"
-                android:textAlignment="textStart"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    />
+                    android:layout_marginRight="190dp"/>
             </LinearLayout>
             <TextView
                 android:layout_width="380dp"
@@ -164,35 +116,13 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="1"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="영수증"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:id="@+id/receipt_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -202,6 +132,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="우유팩"
+                    android:id="@+id/milk_pack_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
@@ -225,7 +156,8 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="전단지"
+                    android:id="@+id/flyer_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -234,7 +166,8 @@
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
+                    android:text="종이봉투"
+                    android:id="@+id/paper_bag_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
@@ -259,55 +192,13 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="컵라면 용기"
+                    android:id="@+id/noodle_container_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
+                    android:layout_marginRight="190dp"
                     />
             </LinearLayout>
-            <TextView
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="- ㉬~㉭ "
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/imcresoojin"
-                android:textColor="@color/black"
-                android:textAlignment="textStart"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="아이스팩"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    />
-            </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
 
 

@@ -36,7 +36,7 @@ public class category_plastic_bottle extends Fragment {
         textView2 = (TextView)v.findViewById(R.id.warning_tv2);
 
         Spannable spannable = (Spannable)textView.getText();
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),22,28,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),22,26,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),38,44,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         Spannable spannable1 = (Spannable)textView2.getText();

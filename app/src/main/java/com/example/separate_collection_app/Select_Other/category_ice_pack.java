@@ -37,12 +37,10 @@ public class category_ice_pack extends Fragment {
         textView2 = (TextView)v.findViewById(R.id.warning_tv2);
 
         Spannable spannable = (Spannable)textView.getText();
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),0,6,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),26,28,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),34,39,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),15,21,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         Spannable spannable1 = (Spannable)textView2.getText();
-        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,23,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable1.setSpan(new ForegroundColorSpan(Color.rgb(159,33,33)),0,59,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         back_BT.setOnClickListener(new View.OnClickListener() {
             @Override

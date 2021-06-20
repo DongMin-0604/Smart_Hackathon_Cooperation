@@ -363,7 +363,7 @@ public class StartActivity extends AppCompatActivity {
 
         Calendar calendar2 = Calendar.getInstance();
 //      int mDayOfWeek = calendar2.get(Calendar.DAY_OF_WEEK);
-        String from = "080000";
+        String from = "080000AM";
         int dayofweek = 0;
         SimpleDateFormat dateFormat1 = new SimpleDateFormat();
         Date datetime = null;

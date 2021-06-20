@@ -71,6 +71,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="과자봉지"
+                    android:id="@+id/snack_bag_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -81,6 +82,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="라면봉지"
+                    android:id="@+id/noodle_bag_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
@@ -105,6 +107,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="비닐랩"
+                    android:id="@+id/wrap_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -116,6 +119,7 @@
                     android:background="@drawable/back_bt_background"
                     android:fontFamily="@font/imcresoojin"
                     android:text="비닐봉지"
+                    android:id="@+id/plastic_bag_bt"
                     android:textColor="@color/white" />
             </LinearLayout>
             <TextView
@@ -132,12 +136,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginTop="15dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
                 android:layout_marginTop="15dp">
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -145,22 +143,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="에어캡(뽁뽁이)"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="190dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="일회용 비닐봉지"
+                    android:id="@+id/air_cap_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     android:layout_marginRight="20dp"
@@ -170,32 +153,37 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/back_bt_background"
                     android:text="알약포장재"
+                    android:id="@+id/pill_packaging_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
                     />
             </LinearLayout>
-
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="- ㉪~㉫ "
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/imcresoojin"
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginTop="15dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp"/>
-
+                android:layout_marginTop="15dp">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/back_bt_background"
+                    android:text="커피봉지"
+                    android:id="@+id/coffee_bag_bt"
+                    android:fontFamily="@font/imcresoojin"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="190dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

@@ -22,7 +22,6 @@ import com.example.separate_collection_app.Select_Other.category_mask;
 import com.example.separate_collection_app.Select_Other.category_medicinem;
 import com.example.separate_collection_app.Select_Other.category_rubber;
 import com.example.separate_collection_app.Select_Other.category_silicone;
-import com.example.separate_collection_app.Select_Other.category_sterilization_pack;
 import com.example.separate_collection_app.Select_Other.category_styrofoam;
 import com.example.separate_collection_app.Select_Other.category_wet_tissue;
 import com.example.separate_collection_app.Select_Other.category_wire_cloth;
@@ -30,7 +29,7 @@ import com.example.separate_collection_app.Select_Other.category_wire_cloth;
 public class category_Other extends Fragment {
 
     Button back_BT;
-    Button wire_cloth_BT,mask_BT,home_appliance_BT,cosmetics_BT,wet_tissue_BT,ice_pack_BT,rubber_BT,sterilization_pack_BT,styrofoam_BT,aluminum_BT,medicinem_BT,battery_BT,silicone_BT;
+    Button wire_cloth_BT,mask_BT,home_appliance_BT,cosmetics_BT,wet_tissue_BT,ice_pack_BT,rubber_BT,styrofoam_BT,aluminum_BT,medicinem_BT,battery_BT,silicone_BT;
 
     public static category_Other newInstance(){
         return new category_Other();
@@ -49,7 +48,6 @@ public class category_Other extends Fragment {
         wet_tissue_BT = (Button)v.findViewById(R.id.wet_tissue_bt);
         ice_pack_BT = (Button)v.findViewById(R.id.ice_pack_bt);
         rubber_BT = (Button)v.findViewById(R.id.rubber_bt);
-        sterilization_pack_BT = (Button)v.findViewById(R.id.sterilization_pack_bt);
         styrofoam_BT = (Button)v.findViewById(R.id.styrofoam_bt);
         aluminum_BT = (Button)v.findViewById(R.id.aluminum_bt);
         medicinem_BT = (Button)v.findViewById(R.id.medicinem_bt);
@@ -112,13 +110,6 @@ public class category_Other extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainActivity)getActivity()).replaceFragment(category_rubber.newInstance());
-            }
-        });
-
-        sterilization_pack_BT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).replaceFragment(category_sterilization_pack.newInstance());
             }
         });
 

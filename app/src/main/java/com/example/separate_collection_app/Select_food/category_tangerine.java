@@ -38,7 +38,7 @@ public class category_tangerine extends Fragment {
 
         Spannable spannable = (Spannable)textView.getText();
         spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),9,19,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),43,51,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),43,47,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),58,81,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannable.setSpan(new ForegroundColorSpan(Color.rgb(79,60,151)),83,88,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         Spannable spannable1 = (Spannable)textView2.getText();

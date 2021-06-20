@@ -62,7 +62,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="재활용"
+                android:text="재활용,일반쓰레기"
                 android:textStyle="bold"
                 android:fontFamily="@font/wemakeprice_semibold"
                 android:textColor="#4F3C97"

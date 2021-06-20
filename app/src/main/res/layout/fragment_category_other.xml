@@ -97,16 +97,7 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginTop="15dp">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_bt_background"
-                    android:text="멸균팩"
-                    android:id="@+id/sterilization_pack_bt"
-                    android:fontFamily="@font/imcresoojin"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="20dp"
-                    />
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
@@ -115,14 +106,8 @@
                     android:id="@+id/mask_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
+                    android:layout_marginRight="20dp"
                     />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="15dp">
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
@@ -131,7 +116,6 @@
                     android:id="@+id/wet_tissue_bt"
                     android:fontFamily="@font/imcresoojin"
                     android:textColor="@color/white"
-                    android:layout_marginRight="190dp"
                     />
             </LinearLayout>
             <TextView
